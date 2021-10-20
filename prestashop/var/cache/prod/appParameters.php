@@ -1,0 +1,25 @@
+<?php return array (
+  'parameters' => 
+  array (
+    'database_host' => 'db',
+    'database_port' => '',
+    'database_name' => 'presta_lamps',
+    'database_user' => 'root',
+    'database_password' => 'root',
+    'database_prefix' => 'ps_',
+    'database_engine' => 'InnoDB',
+    'mailer_transport' => 'smtp',
+    'mailer_host' => '127.0.0.1',
+    'mailer_user' => NULL,
+    'mailer_password' => NULL,
+    'secret' => 'iAE55xSe32LWWfUdBLddXx4wOXY4NuyRMivIv9SjdwD7Ksg8bc0Wmb2EfTXa2mAu',
+    'ps_caching' => 'CacheMemcache',
+    'ps_cache_enable' => false,
+    'ps_creation_date' => '2021-10-20',
+    'locale' => 'en-US',
+    'use_debug_toolbar' => true,
+    'cookie_key' => 'MNqU3vhsRYA0AkpvrOIyJiRmoDiejEy5OFNWVaMjCqnjZy5gugZCngaUY7PXuPmW',
+    'cookie_iv' => 'WivLUgKQmO6fhKVdRLk7Pag66oketzmv',
+    'new_cookie_key' => 'def000005fdf50f431ca587f45ab8a0b9ca6bb61cd4478a499740c9f1e647c6ac2c363ff5545b2035734d2d692d731e895600f5dbef1e0e883f373a3a86e2ed15705bc3c',
+  ),
+);

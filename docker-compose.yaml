@@ -1,0 +1,40 @@
+version: '3.3'
+
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: presta_lamps
+      
+
+  phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      ports:
+        -  8080:80
+      env_file:
+        - .env
+      environment:
+        PMA_HOST: db
+      depends_on:
+        - db
+
+
+  prestashop:
+    depends_on:
+      - db
+    image: prestashop/prestashop:1.7.7.8
+    ports:
+      - 80:80
+    restart: always
+    environment:
+      PS_INSTALL_AUTO: 0
+      PS_ERASE_DB: 0
+      DB_SERVER: db
+      DB_USER: root
+      DB_PASSWD: root
+      DB_NAME: presta_lamps
+      PS_DEV_MODE: 0
+    volumes:
+      - ./prestashop:/var/www/html
