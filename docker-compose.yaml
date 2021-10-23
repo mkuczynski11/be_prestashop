@@ -1,13 +1,15 @@
-version: '3.3'
+version: '3.8'
 
 services:
   db:
     image: mysql:5.7
+    volumes:
+      - ./db-dumps:/docker-entrypoint-initdb.d
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: presta_lamps
-      
+
 
   phpmyadmin:
       image: phpmyadmin/phpmyadmin
@@ -17,8 +19,6 @@ services:
         - .env
       environment:
         PMA_HOST: db
-      depends_on:
-        - db
 
 
   prestashop:
@@ -35,6 +35,7 @@ services:
       DB_USER: root
       DB_PASSWD: root
       DB_NAME: presta_lamps
-      PS_DEV_MODE: 0
+      PS_DEV_MODE: 1
+      PS_DOMAIN: localhost:80
     volumes:
       - ./prestashop:/var/www/html
