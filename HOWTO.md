@@ -1,7 +1,8 @@
 # Initialize with current db dump
-```bash
+Make sure dump.sql is in db-dumps directory
+```powershell
 docker-compose up
-cat ./tmp/dump.sql | docker exec -i presta_lampy-db-1 /usr/bin/mysql -u root --password=root presta_lamps
+cat ./db-dumps/dump.sql | docker exec -i presta_lampy-db-1 /usr/bin/mysql -u root --password=root presta_lamps
 ```
 
 # Create db dump
