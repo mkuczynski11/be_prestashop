@@ -1,5 +1,7 @@
 import scrapy
 
+# to generate data type in terminal
+# scrapy runspider scripts/scraper.py -o quotes.jl
 class LampScraper(scrapy.Spider):
     name = 'lamps'
     start_urls = [
