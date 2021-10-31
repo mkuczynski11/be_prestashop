@@ -32,3 +32,6 @@ admin-dev/import/
 download/
 /img/*
 upload/
+
+# Python
+*__pycache__
