@@ -1,4 +1,5 @@
 import csv
+import os
 import scrapy
 
 # to generate data type in terminal
@@ -8,6 +9,7 @@ class ProductScraper(scrapy.Spider):
     start_urls = [
         'https://www.lampynowodvorski.pl/',
     ]
+    FILE_NAME = 'products.csv'
     ID = 'ID'
     ACITVE = 'Aktywny (0 lub 1)'
     NAME = 'Nazwa'
@@ -145,6 +147,49 @@ class ProductScraper(scrapy.Spider):
     ACCESORIES]
 
     def parse(self, response):
-        with open('products.csv', mode='w') as products_file:
-            products_writer = csv.writer(products_file, delimiter=';')
-            products_writer.writerow(self.FIRST_ROW)
+
+        # Removing file if it exists, so that new values can be appended
+        # without causing any issues
+        try:
+            os.remove(self.FILE_NAME)
+        except:
+            pass
+
+        first_category_page_links = response.css('ul.menu-cn > li a')
+        yield from response.follow_all(first_category_page_links, self.parse_products_from_category)
+
+    def parse_products_from_category(self, response):
+
+        for item in response.css('div#page > div#products > div.list > div'):
+            # Product internal ID
+            href = item.css('div.photo > a::attr(href)').get()
+
+            # Fully functional link to product page
+            product_page = response.urljoin(href)
+
+            yield scrapy.Request(product_page, callback=self.parse_product)
+
+    def parse_product(self, response):
+
+        # Box with the informations to scrap
+        info_box = response.css('div#product > div#box')
+
+        product_name = info_box.css('h1::text').get()
+
+        breadcrumb = info_box.css('div#breadcrumb > p')
+        categories = self.parse_product_categories(breadcrumb)
+
+        print(f'Product: {product_name}')
+        print(f'Categories: {categories}')
+
+        # with open('products.csv', mode='a') as products_file:
+        #     products_writer = csv.writer(products_file, delimiter=';')
+        #     products_writer.writerow(['Datalallaa','Moooore'])
+            # products_writer.writerow(self.FIRST_ROW)
+
+    def parse_product_categories(self, breadcrumb):
+        categories = []
+        for a in breadcrumb.css('p  > a::text'):
+            categories.append(a.get())
+        # Last breadcrumb is product name
+        return categories[:-1]
