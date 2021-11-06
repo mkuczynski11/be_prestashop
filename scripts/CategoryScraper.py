@@ -20,22 +20,20 @@ class CategoryScraper(scrapy.Spider):
     URL = 'Przypisany URL'
     PHOTO_URL = 'URL zdjęcia'
     ID_OR_SHOP_NAME = 'ID / Nazwa sklepu'
-    FIRST_ROW = [ID, ACITVE, NAME, PARENT, MAIN_CATEGORY, DESCRIPTION, META_TITLE, META_KEYWORDS, META_DESCRIPTION, URL, PHOTO_URL, ID_OR_SHOP_NAME]
 
-    NOT_INCLUDED = ['Profile', 'Cameleon']
+    NOT_INCLUDED = ['Profile', 'Outlet']
 
     def parse(self, response):
         with open('categories.csv', mode='w') as categories_file:
             category_writer = csv.writer(categories_file, delimiter=';')
-            category_writer.writerow(self.FIRST_ROW)
-            id = 1
+            id = 100
             categories = response.css('nav#menu3 > ul.menu-cn > li')
             for item in categories:
                 name = item.css('a::text').get()
                 if name in self.NOT_INCLUDED:
                     continue
                 url = item.css('a::attr(href)').get()
-                category_writer.writerow([id, 1, name, 'Strona główna', 0, None, None, None, None, url, None, None])
+                category_writer.writerow([id, 1, name, 'Strona g??-+???????wna', 0, url])
                 id = id + 1
                 children = item.css('div.sub > ul > li')
                 for child in children:
@@ -43,5 +41,5 @@ class CategoryScraper(scrapy.Spider):
                     if child_name in self.NOT_INCLUDED:
                         continue
                     child_url = child.css('a::attr(href)').get()
-                    category_writer.writerow([id, 1, child_name, name, 0, None, None, None, None, child_url, None, None])
+                    category_writer.writerow([id, 1, child_name, name, 0, child_url])
                     id += 1
