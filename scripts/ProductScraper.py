@@ -15,8 +15,8 @@ class ProductScraper(scrapy.Spider):
     EAN = 'EAN'
     HEIGHT = 'Wysokość'
     WIDTH = 'Szerokość'
+    MPN = 'Nr kat.'
 
-    current_id = 100
     def parse(self, response):
 
         # Removing file if it exists, so that new values can be appended
@@ -68,9 +68,8 @@ class ProductScraper(scrapy.Spider):
         keys = info_box.css('dl > dt::text')
         index = 1
         ean = None
+        mpn = None
         description = None
-        height = None
-        width = None
         features = []
         # For each dt we are trying to parse it to the write column
         for key in keys:
@@ -81,10 +80,8 @@ class ProductScraper(scrapy.Spider):
                 ean = int(value_raw)
             elif key_raw == '':
                 description = value_raw
-            elif key_raw == self.HEIGHT:
-                height = value_raw
-            elif key_raw == self.WIDTH:
-                width = value_raw
+            elif key_raw == self.MPN:
+                mpn = value_raw
             else:
                 features.append(f'{key_raw}:{value_raw}')
             index += 1
@@ -132,9 +129,7 @@ class ProductScraper(scrapy.Spider):
 
         with open(self.FILE_NAME, mode='a+') as products_file:
             products_writer = csv.writer(products_file, delimiter=';')
-            id = self.current_id
-            self.current_id += 1
-            products_writer.writerow([id, product_name, categories, url, ean, description, width, height,  self.features_to_string(features), in_stock])
+            products_writer.writerow([1, product_name, categories, url, ean, mpn, description, self.features_to_string(features), in_stock, delivery_time])
 
     def parse_product_categories(self, breadcrumb):
         categories = []
