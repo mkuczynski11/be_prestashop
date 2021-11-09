@@ -57,6 +57,7 @@ class ProductScraper(scrapy.Spider):
         # Box with the informations to scrap
         info_box = response.css('div#product > div#box')
 
+        active = 1
         product_name = info_box.css('h1::text').get()
 
         # Product categories and url parsing
@@ -126,7 +127,7 @@ class ProductScraper(scrapy.Spider):
                         tmp += item + ' '
                     delivery_time = tmp[:-1]
 
-        on_sale = 1 if in_stock != 0 else 0
+        available = 1 if in_stock != 0 else 0
         price_brutto = float(info_box.css('div#price > strong#priceValue::text').get())
         discount = info_box.css('div#rabat > strong::text').get()
         if discount is not None:
@@ -134,6 +135,9 @@ class ProductScraper(scrapy.Spider):
         discount_percent = info_box.css('div#rabat > span::text').get()
         if discount_percent is not None:
             discount_percent = int(discount_percent.split(' ')[-1][:-1])
+
+        show_price = 1
+        on_sale = 1 if discount is not None else 0
 
         img_urls = []
         img_alts = []
@@ -150,7 +154,7 @@ class ProductScraper(scrapy.Spider):
 
         with open(self.FILE_NAME, mode='a+') as products_file:
             products_writer = csv.writer(products_file, delimiter=';')
-            products_writer.writerow([1, product_name, categories, url, ean, mpn, description, self.features_to_string(features), in_stock, delivery_time, 1, on_sale, on_sale, price_brutto, discount, discount_percent, self.features_to_string(img_urls), self.features_to_string(img_alts)])
+            products_writer.writerow([active, product_name, categories, url, ean, mpn, description, self.features_to_string(features), in_stock, delivery_time, show_price, available, on_sale, price_brutto, discount, discount_percent, self.features_to_string(img_urls), self.features_to_string(img_alts)])
 
     def parse_product_categories(self, breadcrumb):
         categories = []
