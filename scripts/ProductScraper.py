@@ -126,10 +126,31 @@ class ProductScraper(scrapy.Spider):
                         tmp += item + ' '
                     delivery_time = tmp[:-1]
 
+        on_sale = 1 if in_stock != 0 else 0
+        price_brutto = float(info_box.css('div#price > strong#priceValue::text').get())
+        discount = info_box.css('div#rabat > strong::text').get()
+        if discount is not None:
+            discount = float(discount)
+        discount_percent = info_box.css('div#rabat > span::text').get()
+        if discount_percent is not None:
+            discount_percent = int(discount_percent.split(' ')[-1][:-1])
+
+        img_urls = []
+        img_alts = []
+        imgs_box = response.css('div#productImagesPreview > ul#imagesListPreview')
+        if imgs_box is not None:
+            for item in imgs_box.css('li'):
+                img_urls.append(item.css('a::attr(href)').get())
+                img_alts.append(product_name)
+        link = response.css('a#previewLink::attr(href)').get()
+        if link not in img_urls:
+            img_urls.append(link)
+            img_alts.append(product_name)
+
 
         with open(self.FILE_NAME, mode='a+') as products_file:
             products_writer = csv.writer(products_file, delimiter=';')
-            products_writer.writerow([1, product_name, categories, url, ean, mpn, description, self.features_to_string(features), in_stock, delivery_time])
+            products_writer.writerow([1, product_name, categories, url, ean, mpn, description, self.features_to_string(features), in_stock, delivery_time, 1, on_sale, on_sale, price_brutto, discount, discount_percent, self.features_to_string(img_urls), self.features_to_string(img_alts)])
 
     def parse_product_categories(self, breadcrumb):
         categories = []
@@ -139,7 +160,7 @@ class ProductScraper(scrapy.Spider):
         categories = categories[:-1]
         categories_string = ''
         for category in categories:
-            categories_string += category + '//'
+            categories_string += category + '~~'
         return categories_string[:-2]
 
     def parse_product_link(self, breadcrumb):
@@ -148,5 +169,5 @@ class ProductScraper(scrapy.Spider):
     def features_to_string(self, features):
         features_string = ''
         for feature in features:
-            features_string += feature + '//'
+            features_string += feature + '~~'
         return features_string[:-2]
