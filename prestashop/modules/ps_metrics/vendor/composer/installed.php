@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'e9b0fdba99d57b118b7e9c47984fabfb5acdc9ac',
+        'reference' => '6525c8d45f3c9e9d3872fa50f226833346778903',
         'name' => 'prestashop/ps_metrics',
         'dev' => false,
     ),
@@ -103,7 +103,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'e9b0fdba99d57b118b7e9c47984fabfb5acdc9ac',
+            'reference' => '6525c8d45f3c9e9d3872fa50f226833346778903',
             'dev_requirement' => false,
         ),
         'psr/cache' => array(
@@ -278,12 +278,12 @@
             'dev_requirement' => false,
         ),
         'vlucas/phpdotenv' => array(
-            'pretty_version' => 'v3.6.8',
-            'version' => '3.6.8.0',
+            'pretty_version' => 'v3.6.9',
+            'version' => '3.6.9.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../vlucas/phpdotenv',
             'aliases' => array(),
-            'reference' => '5e679f7616db829358341e2d5cccbd18773bdab8',
+            'reference' => 'a1bf4c9853d90ade427b4efe35355fc41b3d6988',
             'dev_requirement' => false,
         ),
         'webonyx/graphql-php' => array(

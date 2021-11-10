@@ -56,6 +56,9 @@ return [
         'productTopSeller' => function ($root, $args, $context) {
             return $context['loaders']['productTopSeller']->load($args);
         },
+        'engagementRate' => function ($root, $args, $context) {
+            return $context['loaders']['engagementRate']->load($args);
+        },
     ],
     'Mutation' => [
         'setProductTourFreeDone' => function ($root, $args, $context) {

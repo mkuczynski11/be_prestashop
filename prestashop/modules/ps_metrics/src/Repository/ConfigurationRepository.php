@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Copyright since 2007 PrestaShop SA and Contributors
  * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
@@ -82,7 +83,7 @@ class ConfigurationRepository
     /**
      * getShopDomain
      *
-     * @return string
+     * @return string|false
      */
     public function getShopDomain()
     {
@@ -147,12 +148,29 @@ class ConfigurationRepository
      *
      * @return array
      */
-    public function getDashboardModulesToToggle()
+    public function getDashboardModulesToToggleAsArray()
     {
-        return json_decode(Configuration::get(
-            self::ACCOUNT_MODULES_STATES,
+        $modules = $this->getDashboardModulesToToggle();
+
+        if (false === $modules) {
+            return [];
+        }
+
+        return json_decode($modules);
+    }
+
+    /**
+     * getModuleListState
+     *
+     * @return string|false
+     */
+    private function getDashboardModulesToToggle()
+    {
+        return Configuration::get(
+            'PS_SHOP_DOMAIN',
             null,
-            null
-        ));
+            null,
+            $this->shopId
+        );
     }
 }

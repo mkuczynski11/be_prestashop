@@ -35,16 +35,19 @@ class SelectAccountAnalytics
             return false;
         }
 
-        /* Check if UA is valid */
+        /* Check if UA- is valid */
         preg_match(
             '/UA-\d{6,}-\d/m',
             $data['webPropertyId'],
             $matchWebPropertyId
         );
 
-        if (empty($matchWebPropertyId)) {
-            return false;
-        }
+        /* Check if G- is valid */
+        preg_match(
+            '/properties\S{10,}/m',
+            $data['webPropertyId'],
+            $matchWebPropertyIdv4
+        );
 
         if (strlen($data['viewId']) < 1) {
             return false;

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Copyright since 2007 PrestaShop SA and Contributors
  * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
@@ -20,8 +21,6 @@
 
 namespace PrestaShop\Module\Ps_metrics\Helper;
 
-use Shop;
-
 class ShopHelper
 {
     /**
@@ -31,7 +30,13 @@ class ShopHelper
      */
     public function getShop($shopId)
     {
-        return Shop::getShop($shopId);
+        $shop = \Shop::getShop($shopId);
+
+        if (!is_array($shop)) {
+            return [];
+        }
+
+        return $shop;
     }
 
     /**
@@ -43,7 +48,7 @@ class ShopHelper
      */
     public function getShops($active = true, $id_shop_group = null, $get_as_list_id = false)
     {
-        return Shop::getShops($active = true, $id_shop_group = null, $get_as_list_id = false);
+        return \Shop::getShops($active = true, $id_shop_group = null, $get_as_list_id = false);
     }
 
     /**
@@ -51,7 +56,7 @@ class ShopHelper
      */
     public function getContextShopGroupID()
     {
-        return Shop::getContextShopGroupID();
+        return \Shop::getContextShopGroupID();
     }
 
     /**
@@ -59,7 +64,7 @@ class ShopHelper
      */
     public function getContext()
     {
-        return Shop::getContext();
+        return \Shop::getContext();
     }
 
     /**
@@ -70,14 +75,14 @@ class ShopHelper
      */
     public function addSqlRestriction($share = false, $alias = null)
     {
-        return Shop::addSqlRestriction($share, $alias);
+        return \Shop::addSqlRestriction($share, $alias);
     }
 
     /**
-     * @return int
+     * @return int|null
      */
     public function getShopId()
     {
-        return Shop::getContextShopID();
+        return \Shop::getContextShopID();
     }
 }

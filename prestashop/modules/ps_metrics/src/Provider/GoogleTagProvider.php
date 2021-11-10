@@ -67,8 +67,34 @@ class GoogleTagProvider
             return [];
         }
 
+        // get google analytics tags < V4
         preg_match_all(
             '/UA-\d{6,}-\d/m',
+            $this->shopSource,
+            $matches
+        );
+
+        if (!empty($matches[0])) {
+            return $matches[0];
+        }
+
+        return $this->findGoogleTagsAnalyticsV4();
+    }
+
+    /**
+     * Find by Regex if a Google Tag Analytics VA (G-XXXXXXXXXX) exists in source aimed page
+     *
+     * @return array
+     */
+    public function findGoogleTagsAnalyticsV4()
+    {
+        if (empty($this->shopSource)) {
+            return [];
+        }
+
+        // get google analytics tags < V4
+        preg_match_all(
+            '/G-\S{10,}/m',
             $this->shopSource,
             $matches
         );

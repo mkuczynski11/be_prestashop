@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Copyright since 2007 PrestaShop SA and Contributors
  * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
@@ -20,7 +21,7 @@
 
 namespace PrestaShop\Module\Ps_metrics\Context;
 
-use ContextCore as Context;
+use Employee;
 
 /**
  * Class PrestaShopContext used to get information from PrestaShop Context
@@ -28,7 +29,7 @@ use ContextCore as Context;
 class PrestaShopContext
 {
     /**
-     * @var Context
+     * @var \Context
      */
     private $context;
 
@@ -39,7 +40,13 @@ class PrestaShopContext
      */
     public function __construct()
     {
-        $this->context = Context::getContext();
+        $context = \Context::getContext();
+
+        if (is_null($context)) {
+            throw new \PrestaShopException('Context is null or invalid');
+        }
+
+        $this->context = $context;
     }
 
     /**
@@ -139,10 +146,28 @@ class PrestaShopContext
     }
 
     /**
+     * Get employee from context
+     *
+     * @return \Employee
+     *
+     * @throws \PrestaShopException
+     */
+    public function getEmployee()
+    {
+        $employee = $this->context->employee;
+
+        if (is_null($employee)) {
+            throw new \PrestaShopException('Employee is null or invalid');
+        }
+
+        return $employee;
+    }
+
+    /**
      * @return int
      */
     public function getEmployeeIdLang()
     {
-        return (int) $this->context->employee->id_lang;
+        return (int) $this->getEmployee()->id_lang;
     }
 }

@@ -136,7 +136,6 @@ class AnalyticsApi
     public function getAccountsList()
     {
         $this->client->setRoute('/shops/' . $this->getShopId() . '/accounts/list');
-
         $accounts = $this->client->get();
 
         return (!empty($accounts['error'])) ? [] : $accounts['body'];

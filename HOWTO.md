@@ -13,11 +13,11 @@ docker exec presta_lampy-db-1 /usr/bin/mysqldump -u root --password=root presta_
 ```
 For bash
 ```bash
-docker exec presta_lampy-db-1 /usr/bin/mysqldump -u root --password=root presta_lamps > dump_backup.sql
+docker exec presta_lampy_db_1 /usr/bin/mysqldump -u root --password=root presta_lamps > dump_backup.sql
 ```
 
 # Access
-email: admin@gmail.com  
+email: mkuczynski11.kontakt@gmail.com
 name: Admin  
 surname: Admin  
 password: adminadmin

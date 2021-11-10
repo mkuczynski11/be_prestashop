@@ -34,6 +34,7 @@ $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_084fa2ad7d8b6b3811d8175cd
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_08a789940c0068d976f5bfc89af59f8a'] = '{valueCustomers}{typeValueCustomers} of your customers are returning customers, they represent {valueRevenues}{typeValueRevenues} of your revenue over the period.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_094ece05bdf630bc8ff4045f7b8156cd'] = 'AVERAGE ORDER VALUE';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_09e74fd3d9ed7ab259e01d5f324f8620'] = 'Interested in those features?';
+$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_0aff3ef4232ce1adf7bf5e3e081bb7cd'] = 'Unlock the power of your data with a 24 months data history. Analyze your performance over more than one year. Combined with our new comparison mode, you will be able to get a year-over-year analysis very easily.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_0b97f2e74a687d594da20ac0b66aa774'] = 'The traffic your website got from social media like Facebook, Twitter, Linkedin, etc.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_0da8d9a75492046bea7f314521e07cae'] = 'Payment methods';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_10965b2740f42ad4887932c35cee26ab'] = 'Unique visitors';
@@ -46,8 +47,11 @@ $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_180f942a72a19999884248639
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_18b6c129e3581c2f0db837814a8b09a0'] = 'Go further in the analysis';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_1a0bf962710737ac78e7e7f6bbe13350'] = 'Compared with previous period';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_1a7246ccc033615c4703e05f3c7bf345'] = 'Name of product';
+$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_1a9c499aec82b18e127f4423c5f4ca23'] = 'Select the analysis period and view up to 24 months of data.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_1b551e40d4b74ccdc16136745ea5d1f5'] = 'The Average Cart Value is the average amount spent by a customer per transaction on your store.';
+$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_1b74b8a2d7bdeab0e63eda0da4980777'] = 'Date range too large for ‘Last year’ comparison';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_1c4363a28705c7a5ae4ae06919035d80'] = 'View more precisely the key data of your activity: Business, Acquisition and Customer knowledge - available with the Advanced plan';
+$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_1cd1c534ca83139177ca734caca4a711'] = 'Engagement rate';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_1cf597c8b86cc723d1e28c71a9ebd1e5'] = 'Percentage of shopping carts created by a user and abandoned before completing the purchase.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_1dd1c5fb7f25cd41b291d43a89e3aefd'] = 'Today';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_1f6d16159e43685ed7f4b91e9bbabd62'] = 'Highlights and detailed metrics on 3 key dimensions of your e-commerce: Business, Acquisition, Customer Knowledge';
@@ -58,26 +62,30 @@ $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_21792cc3fb43211ceae990649
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_23819d8b533492c9c165c5b66ecb6b06'] = '{valueCustomers}{typeValueCustomers} of your customers are new customers, they represent {valueRevenues}{typeValueRevenues} of your revenue over the period.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_2557491405dd96ce43f55a3133cfd1fe'] = 'Last 30 days';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_26b02164100fd88a409c90b4466cb9c5'] = 'Synchronization status';
+$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_27ce7f8b5623b2e2df568d64cf051607'] = 'Stock';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_287847fed2909e1942738020a56dc01f'] = 'Get some insights and tips to grow your business!';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_28f2b1788720a06f17dab2e98b479aaf'] = 'Your current plan allows you to analyse data collected during the last 90 days';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_290612199861c31d1036b185b4e69b75'] = 'Summary';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_2a8cc5c4c9f1ba93c25bd3f5a3fa6e01'] = 'revenue | revenues';
+$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_2af8e3ca3c5c9486d655994e429e89b6'] = 'Quantity sold over the period';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_2b7c8eba3371f905d1656567ef622f43'] = 'Access to all tabs';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_2ca6ef1f1ee991e6b598bd6c11379667'] = 'Your data is regularly synchronized to ensure fast display.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_2cd1992e0356c17be8d3e96a39d84804'] = 'See the module';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_2cdb3eb1154a17c80393a39c4bf3c18d'] = 'This graph shows the sales evolution over both the current period and the previous one, if the comparison mode is activated.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_2ce73c4d438dff8b9f5d55ba411d6e7b'] = 'Select the analysis period and display up to 3 months of data.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_2e1d88d5cf8ce608167658071ef4b7cc'] = 'Gross Revenue';
+$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_2f58b8358d19d150ff268ff59203c462'] = 'Date range too large for comparison';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_30346b8afec57f45ce2a2df49ad095a8'] = 'Follow the evolution of your business at a glance.';
-$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_314fe27a32557c65b4b6893f8d522a4b'] = 'In order to display sessions and conversion data, you need to configure your Google Analytics account.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_319e1109dd2856acead9fc01962109aa'] = 'Traffic distribution';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_31acc76f284bd8399a1d7fc0ed4d0467'] = 'Bank transfert';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_3200d68faae91327d65909eecd183690'] = 'Last synchronization';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_3294934064451be77f2092f9b651128e'] = 'This period is only available with the Advanced plan';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_3411c629e7f7a8a040e02be525b6c65b'] = 'Follow this tutorial to master the module on your fingertips. You can find the shortcut to the module from the Statistics tab.';
+$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_3416db75a1c43473fab18e3088221727'] = 'Stock remaining';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_368fe771261fcb18f7988833c9294a20'] = 'Tutorial';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_36febc1844238a4b62d8beb0b56f0df6'] = 'You must {linktext} account.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_37a01a758703810fb4f2da2141818689'] = 'E-Transaction';
+$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_382f2d94befe41df42b6c3ff634e3ba3'] = 'Go further with 24 months of data history';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_38c3d72e68bbce4bc15abd6fec4160c2'] = 'This graph shows the orders evolution over both the current period and the previous one, if the comparison mode is activated.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_3b05b84c0f4b721e4f96450924b209cb'] = 'Synchronization scheduled';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_3b0a1a88cb99797c421d58e81ca63f5a'] = 'Unique sessions';
@@ -87,6 +95,7 @@ $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_3d368f70fb2d5a780a282df8d
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_3dfec52bff95657ed2d51e760c6f437a'] = 'Control and optimize your KPIs with 100% reliable data.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_3e1873319ccdca7bcce2b4980f8795c4'] = 'The Gross Revenue is the total amount of sales recognized for the selected period, prior to any deductions.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_4129a8f4f0f0adcd916ad097da55f5eb'] = 'Total distinct users who have visited one or several pages on your store at least once within the date range.';
+$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_42d991aa9dbdee8179f7e6bb3bae53cd'] = '24 months of historical data available';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_42e8594985193246a2e570ca89b5356c'] = 'The traffic to your website got from a backlink on another website';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_43340e6cc4e88197d57f8d6d5ea50a46'] = 'Read more';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_438c1d266bf3659e6efafc0c898ae635'] = 'Last week';
@@ -113,7 +122,6 @@ $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_6311ae17c1ee52b36e68aaf4a
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_63cfd1a174bbb041d0ab60411330aba8'] = 'Select the analysis period';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_6609dd239e143d00002123326c5e4aad'] = 'Something went wrong';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_66a00284eaa231e1fd01a6920cd1d99f'] = 'Tabbed navigation';
-$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_694e8d1f2ee056f98ee488bdc4982d73'] = 'Quantity';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_6c0238413fe749e7c182142b2e91262c'] = 'The Bounce Rate represents the percentage of visitors who enter your website and leave directly without viewing any other pages.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_6c752b3e857f038c22eac3e400e72487'] = 'Average cart value evolution';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_6d7514b19ef511c46438f8f5cc2b9842'] = 'Sessions evolution';
@@ -135,10 +143,12 @@ $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_77fa86d373cdcd0c94a04280d
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_796ad59f0d90b551fbd2bc026cfe637f'] = 'The share of returning customers has {highlight} by {value}{symbol} compared to the previous period.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_7a077d612f50226cff67a767f4b8af00'] = 'Acquisition';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_7b4c8a175c85916202bf5465446f1723'] = 'Affiliates';
+$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_7b8eff35922271ba759835241c90e74e'] = 'The Engagement Rate is the ratio between your engaged sessions and your total sessions.  An engaged session is defined as a session that spent 10 seconds or more on the site or viewed 2 or more screens/pages or had a conversion event.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_7c28c652ed540390ad3fe21a10e1d970'] = 'Total number of sessions on your store within the date range when one or several pages have been loaded by a user.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_7ca2189b4cade1f8bd00474f85351d5a'] = ' Average value of the orders received within the date range, calculated by dividing Revenue by Orders.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_7cbb885aa1164b390a0bc050a64e1812'] = 'Month';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_7f12c0755ea6cf14c4bd9a0d6b27b39d'] = 'Discover more insights';
+$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_7f4a703053dc201469b591a1ecedb47b'] = 'By default, the comparison is desactivated, you can enable it and select the previous period or the last year for comparison.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_7f66236691d95fa5c2057dc5a3eea3d0'] = 'The traffic to your website got from direct access, for example by typing your URL in the browser address bar or via a bookmark.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_80262595965a055edf8dd33a7866567a'] = 'The traffic your website got from display ads on another website';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_80cbddde2192d459a99ee9b8088a6df5'] = 'Last month';
@@ -170,7 +180,6 @@ $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_97f8bfb09183531c8428bf62a
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_98455de5756f2bc9336e2c0cd9d8f1a6'] = 'The top-selling category over the period is {product}. It generated {value}{symbol}';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_9b1024b1350017783b96a77357a7af71'] = 'No data available for now';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_9b88c95a15e018c3f8038a7d0160145c'] = 'Paypal';
-$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_9d976d02d6f499b4b999761f7cbd7404'] = 'Unlock the power of your data with a 14 months data history. Analyze your performance over more than one year. Combined with our new comparison mode, you will be able to get a year-over-year analysis very easily.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_9dbbb666fc626eb3ed5b6a364149ca12'] = 'Update module';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_9dd52cef0a2c373eb47402cfb3c0f863'] = 'Subscribe to Advanced Plan';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_9e8384b3793ff58e5288fd50dbba12fb'] = 'Revenue Analysis';
@@ -184,10 +193,9 @@ $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_a3f8efbd49a6534a71a3e0618
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_a4234d8b7d19ca303ac45df676ec15b3'] = 'Cart abandonment rate';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_a4776df1e1904ba22dde322333fa1af5'] = 'Your previous statistics blocks have been disabled to avoid overloading your dashboard';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_a58e10475d202defcf18f45694a10e3f'] = 'Compare with previous period';
-$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_a91bbfe1b7e6b2cb13265681d36f0cea'] = 'Select the analysis period and view up to 14 months of data.';
+$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_a74764e65d35bbea8745a23c0f5c11de'] = 'Upgrade to compare with last year';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_a9c4b6c9fbd990849d1f128dfc4ed3e7'] = 'Sessions';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_aa58d512aa7688393dfec119b6cbc1b9'] = 'This tab is only available with the Advanced plan.';
-$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_aad9e8bcc3f985ae8e20e6aa3842c395'] = 'Date range too large';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ab2ab704ae9ac6b98e16a48307550d78'] = 'filter selected';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ae581126b16d053885e239408267137f'] = 'Percentage of users who completed an order, out of the total number of users, within the date range.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_af2d9c3af1a015ae6ed5eb11d0b88a5c'] = 'This chart shows the detailed composition of the global traffic on your website over the period.';
@@ -219,7 +227,6 @@ $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_c9d11b65fe46b5ccb0f816ee0
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_caa9dddcf7b51eabeb48f22f14f84feb'] = 'No source';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_caf2a90cc59fa4fffcc9568ad8fb00a7'] = 'See why';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_cb8f14fd3a41cfe1236a3c6b90077ca0'] = '7 days';
-$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_cc3ed201a065b2619503a0265106807c'] = 'Go further with 14 months of data history';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_cd851a8d5c71512cad25de10fe9b5356'] = 'Highlights';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ce8ae9da5b7cd6c3df2929543a9af92d'] = 'Email';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_cf419ab65d67245beffc05b179491f9d'] = 'Tips to grow your revenue';
@@ -266,10 +273,10 @@ $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_e73d8b68fa55c9b557f11fe9f
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_e75f20a82645144eacbb40ca854bd17e'] = 'Top 10 products ordered';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_e7f9e382dc50889098cbe56f2554c77b'] = 'Credit card';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_e7fe0d75771ae9a77eb3a98762510a79'] = 'Your upgrade has been completed, you now have access to all features, here is a quick overview.';
+$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_e9f793d7ded52216538e3575202f447f'] = 'In order to display sessions and conversion data, you need to configure your google analytics account.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ea1bd626d04a840bd5f239c414f0857e'] = 'than previous period';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ea33a2f3de5b0efc107eed174b71101b'] = 'Unlock all the features by subscribing to the Advanced plan.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ea9cf7e47ff33b2be14e6dd07cbcefc6'] = 'Shipping';
-$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_eb568e7ca8f45ee9a7eacd9563b0cfd1'] = '14 months of historical data available';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ebbb98486e0e50bc728d6d805c97d25d'] = 'This graph shows the cart average value evolution over both the current period and the previous one, if the comparison mode is activated.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ebfe9ce86e6e9fb953aa7a25b59c1956'] = 'Yesterday';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ecfc2dffe568c10a67dbc6d3724cfde2'] = 'Activity';
@@ -277,7 +284,6 @@ $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ed0ea885a4980c2f308eacc03
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ef5a748681ee0940986629035b69d89f'] = 'Compare with';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f1206f9fadc5ce41694f69129aecac26'] = 'Configure';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f138d22ade29991946a258bff7f0fba7'] = 'Your data of the current day';
-$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f167c682f101206f9687d2db59f26f3a'] = 'By default, the comparison with the previous period is activated, you can deactivate it.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f16f57a1c7a66231cbdade8cc21d4bbc'] = 'max_user_connections';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f20407c7334fa036d225d605f50dba14'] = 'This chart shows the detailed composition of the Gross Sales Revenue over the period.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f2407056c089170d4df9dac66a284f38'] = 'Coming Soon';
@@ -285,7 +291,7 @@ $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f315467a284225425c79655d0
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f431e17ea0081a3c9e51fc240221ee21'] = 'Social';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f4ba63a5b3f518d5c49c1c838ae38b3c'] = 'This graph shows the sessions evolution over both the current period and the previous one, if the comparison mode is activated.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f4f70727dc34561dfde1a3c529b6205c'] = 'Settings';
-$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f57104d0407147cf876c8749b1f2423e'] = '14 months of data history';
+$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f5273f442ba2e222a497689b7e28a52c'] = 'Subscribe to Advanced Plan to unlock last year';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f58a6be96db2d79cc83661971784c192'] = 'source | sources';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f915a95e609bbd517a8a1e7bdcceef37'] = 'Try again';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f98a799903e59d579496312b1963673b'] = 'Upcoming features';
@@ -294,6 +300,7 @@ $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_fa65a7d32a2d259a29fcb8302
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_facced262ad2d5c9396be71869637117'] = 'No tour available for plan {plan} !';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_fb0b3f05ee40f758ff61c175dd444d06'] = 'Gather all your data in one place.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_fb85ec6aa16012dc114ff64bb2a94911'] = 'Grow your business';
+$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_fbf403bfea14b11962d890322c2b5f1e'] = '24 months of data history';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_fcff0caf6c3115ae6e7d7e76400d7f99'] = 'Net revenue';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_fd1dd0c603be8170f9eae0be9f2f6afb'] = 'Direct';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_fdfead9d72a886a7ef27dad51915b78a'] = 'You didn\'t get any activity during this period';
@@ -307,6 +314,7 @@ $_MODULE['<{ps_metrics}prestashop>settingstranslation_0398b261b14a89ab24f8d911b0
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_0557fa923dcee4d0f86b1409f5c2167f'] = 'Back';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_0599fb463196c9297c3f9f310818c2bc'] = 'Open Metrics';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_1485342df482e44af7207b802a2a5afe'] = 'PrestaShop Metrics will use data about: total revenue, revenue per category, orders, average order value, abandoned carts rate, new or returning customer status, etc.';
+$_MODULE['<{ps_metrics}prestashop>settingstranslation_14f69616d7312241dc3ba76a2f222701'] = 'It looks like you don\'t have a tag (UA-XXXXX-X OR G-XXXXXXXXX) on your google analytics account.';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_191941b0e317de73f2deafcaa9513bcc'] = 'Save time with a unique and clean dashboard';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_1a67463d3503a3dbf2be615a73d60c78'] = 'It seems you have a problem with your Google Analytics account.';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_1b64516d286ebbf9977c89a3e3f4847f'] = 'Are you sure you want to Logout?';
@@ -318,8 +326,6 @@ $_MODULE['<{ps_metrics}prestashop>settingstranslation_34577fc0116aa3a2db0d3bbe55
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_3f42b1aefa1ca9693cb7f249b32eea11'] = 'to get right data';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_41e09d79e8ac1f7767c33f99b93a0801'] = 'A tag has been found on your store but it seems that its property is not linked to your Google Analytics account.';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_4394c8d8e63c470de62ced3ae85de5ae'] = 'Log out';
-$_MODULE['<{ps_metrics}prestashop>settingstranslation_45387c0d98ff600cce6473327ab1aa47'] = 'It looks like you don\'t have a tag (UA-XXXXX-X) on your google analytics account.';
-$_MODULE['<{ps_metrics}prestashop>settingstranslation_46f59623f012f14c896430be5e334ae9'] = 'It looks like no tag has been installed on your store yet. You can configure one easily using our {psAnalyticsLink} for Google Analytics 3 and under. For Google Analytics 4, you will have to use another module from {marketplaceLink}.';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_4c87a25c7288c5aa161f90e5158adf5e'] = 'The property you selected doesn\'t match with the tag configured in your shop. Select another property or configure another tag.';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_5aa7427fcca69cf3544a85978015aaf0'] = 'Find more information in our FAQ.';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_5d0b229db5c328e063ae24e22e8df982'] = 'Select this property';
@@ -329,6 +335,7 @@ $_MODULE['<{ps_metrics}prestashop>settingstranslation_69cf48db775a5243349debcafc
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_6a26f548831e6a8c26bfbbd9f6ec61e0'] = 'Help';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_6cb6dcbac585d23602ac4d9ddef4bf24'] = 'Select one Google Analytics property';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_70d9be9b139893aa6c69b5e77e614311'] = 'Confirm';
+$_MODULE['<{ps_metrics}prestashop>settingstranslation_71c6f2ffbff23d53b8a82af5add44479'] = 'configure one easily using';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_728adb355089a8335b0960b5bd9c7bcc'] = 'Status of the sync:';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_757bd87eea1618d7fd9433c3590a71d8'] = 'Sync done';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_79d43c591c08687816ce02b7761cc2ae'] = 'Gather all your data in one place';
@@ -351,6 +358,7 @@ $_MODULE['<{ps_metrics}prestashop>settingstranslation_cc699ed4a3dd508aa27046ee9f
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_d3d2e617335f08df83599665eef8a418'] = 'Close';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_d4e6a15c1666f8ca385b02db926323cb'] = 'Change Google Analytics property';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_d86cf69a8b82547a94ca3f6a307cf9a6'] = 'Google Analytics';
+$_MODULE['<{ps_metrics}prestashop>settingstranslation_da35b68b04e3d94f54719afcc5a584ca'] = 'It looks like no tag has been installed on your store yet. You can {psAnalyticsAction} our {psAnalyticsLink} for Google Analytics 3 and under. For Google Analytics 4, you will have to use another module from {marketplaceLink}.';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_dc7161be3dbf2250c8954e560cc35060'] = 'dashboard';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_e22f7817db595acf0b61ccd04e397264'] = 'Monitor easily your business on a daily basis';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_e6f108184aa486ff3f042814a18bea59'] = 'our marketplace';
@@ -360,4 +368,5 @@ $_MODULE['<{ps_metrics}prestashop>settingstranslation_f0411ca83e625da2c18b5f0c06
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_f4f70727dc34561dfde1a3c529b6205c'] = 'Settings';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_f7357dff984d289ee8c242f30d96f8ce'] = 'Connect to your PrestaShop account and collect reliable data from your store and Google Analytics';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_fc95b26ccb9b5b270f62ac8a178cbfc9'] = 'Add data sources';
+$_MODULE['<{ps_metrics}prestashop>settingstranslation_fd456406745d816a45cae554c788e754'] = 'download';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_fd9aab6f08d973a4a986ef7811fa60a3'] = 'No FAQ available.';

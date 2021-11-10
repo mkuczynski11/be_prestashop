@@ -201,8 +201,8 @@ class DashboardTranslation
                     'getNotifiedModal' => $this->module->l('Keep always up to speed with your last week\'s performance! Our weekly reporting allows you to get a comprehensive, good-looking and insightful report on your activity. Delivered every Monday, right to your inbox.', 'DashboardTranslation'),
                     'exportData' => $this->module->l('Export your data to CSV and PDF files', 'DashboardTranslation'),
                     'exportDataModal' => $this->module->l('Easily export and share your data. Export your data to a .csv file covering all your KPIs within the selected date range and granularity.  Or download your instant .pdf report, ready to share with your team.', 'DashboardTranslation'),
-                    'analyseLast15Months' => $this->module->l('Go further with 14 months of data history', 'DashboardTranslation'),
-                    'analyseLast15MonthsModal' => $this->module->l('Unlock the power of your data with a 14 months data history. Analyze your performance over more than one year. Combined with our new comparison mode, you will be able to get a year-over-year analysis very easily.', 'DashboardTranslation'),
+                    'analyseLast15Months' => $this->module->l('Go further with 24 months of data history', 'DashboardTranslation'),
+                    'analyseLast15MonthsModal' => $this->module->l('Unlock the power of your data with a 24 months data history. Analyze your performance over more than one year. Combined with our new comparison mode, you will be able to get a year-over-year analysis very easily.', 'DashboardTranslation'),
                     'upcomingFeatures' => $this->module->l('Upcoming features', 'DashboardTranslation'),
                 ],
             ],
@@ -282,6 +282,10 @@ class DashboardTranslation
                     'E-Transaction' => $this->module->l('E-Transaction', 'DashboardTranslation'),
                     'Paypal' => $this->module->l('Paypal', 'DashboardTranslation'),
                     'Bank_transfer' => $this->module->l('Bank transfert', 'DashboardTranslation'),
+                    'Unassigned' => $this->module->l('Undefined', 'DashboardTranslation'),
+                    'Video' => $this->module->l('Video', 'DashboardTranslation'),
+                    'Organic_Social' => $this->module->l('Organic Social', 'DashboardTranslation'),
+                    'Paid_Social' => $this->module->l('Paid_Social', 'DashboardTranslation'),
                 ],
             ],
             'highlight' => [
@@ -308,6 +312,8 @@ class DashboardTranslation
                 'uniqueSessionTooltip' => $this->module->l('Total number of sessions on your store within the date range when one or several pages have been loaded by a user.', 'DashboardTranslation'),
                 'bounceRate' => $this->module->l('Bounce rate', 'DashboardTranslation'),
                 'bounceRateTooltip' => $this->module->l('The Bounce Rate represents the percentage of visitors who enter your website and leave directly without viewing any other pages.', 'DashboardTranslation'),
+                'engagementRate' => $this->module->l('Engagement rate', 'DashboardTranslation'),
+                'engagementRateTooltip' => $this->module->l('The Engagement Rate is the ratio between your engaged sessions and your total sessions.  An engaged session is defined as a session that spent 10 seconds or more on the site or viewed 2 or more screens/pages or had a conversion event.', 'DashboardTranslation'),
                 'averageSessionDuration' => $this->module->l('Average session duration', 'DashboardTranslation'),
                 'averageSessionDurationTooltip' => $this->module->l('The Average session duration is a metric that measures the average length of sessions on your website.', 'DashboardTranslation'),
                 'sessions' => $this->module->l('Sessions', 'DashboardTranslation'),
@@ -354,7 +360,7 @@ class DashboardTranslation
                     'modalTitleUpgrade' => $this->module->l('Upgrade your plan', 'DashboardTranslation'),
                     'header' => $this->module->l('Subscribe to Advanced Plan', 'DashboardTranslation'),
                     'listitem' => [
-                        '1' => $this->module->l('14 months of data history', 'DashboardTranslation'),
+                        '1' => $this->module->l('24 months of data history', 'DashboardTranslation'),
                         '2' => $this->module->l('Your data of the current day', 'DashboardTranslation'),
                         '3' => $this->module->l('Access to all tabs', 'DashboardTranslation'),
                     ],
@@ -365,7 +371,7 @@ class DashboardTranslation
                     'modalTitleUpgrade' => $this->module->l('Subscribe to Advanced Plan', 'DashboardTranslation'),
                     'header' => $this->module->l('Unlock the following features:', 'DashboardTranslation'),
                     'listitem' => [
-                        '1' => $this->module->l('14 months of historical data available', 'DashboardTranslation'),
+                        '1' => $this->module->l('24 months of historical data available', 'DashboardTranslation'),
                         '2' => $this->module->l('Highlights and detailed metrics on 3 key dimensions of your e-commerce: Business, Acquisition, Customer Knowledge', 'DashboardTranslation'),
                         '3' => $this->module->l('Your data of the current day on the Overview', 'DashboardTranslation'),
                     ],
@@ -416,9 +422,17 @@ class DashboardTranslation
                 'title' => $this->module->l('Module upgraded to version', 'DashboardTranslation'),
             ],
             'compareMode' => [
-                'title' => $this->module->l('Compare with previous period', 'DashboardTranslation'),
-                'tooltip' => $this->module->l('Compare with previous period', 'DashboardTranslation'),
-                'dateRangeError' => $this->module->l('Date range too large', 'DashboardTranslation'),
+                'title' => $this->module->l('Compare with', 'DashboardTranslation'),
+                'dateRangeTooLarge' => [
+                    'freeVersion' => $this->module->l('Upgrade to compare with last year', 'DashboardTranslation'),
+                    'previousPeriod' => $this->module->l('Date range too large for comparison', 'DashboardTranslation'),
+                    'lastYear' => $this->module->l('Date range too large for ‘Last year’ comparison', 'DashboardTranslation'),
+                ],
+                'needAdvancedPlan' => $this->module->l('Subscribe to Advanced Plan to unlock last year', 'DashboardTranslation'),
+                'type' => [
+                    'previousPeriod' => $this->module->l('Previous period', 'DashboardTranslation'),
+                    'lastYear' => $this->module->l('Last year', 'DashboardTranslation'),
+                ],
             ],
             'tour' => [
                 'noTourForPlanAvailable' => $this->module->l('No tour available for plan {plan} !', 'DashboardTranslation'),
@@ -444,7 +458,7 @@ class DashboardTranslation
                 ],
                 'compareMode' => [
                     'title' => $this->module->l('Comparison of periods', 'DashboardTranslation'),
-                    'description' => $this->module->l('By default, the comparison with the previous period is activated, you can deactivate it.', 'DashboardTranslation'),
+                    'description' => $this->module->l('By default, the comparison is desactivated, you can enable it and select the previous period or the last year for comparison.', 'DashboardTranslation'),
                 ],
                 'options' => [
                     'title' => $this->module->l('Interface shortcuts', 'DashboardTranslation'),
@@ -468,7 +482,7 @@ class DashboardTranslation
                 ],
                 'advanced_daterange' => [
                     'title' => $this->module->l('Extended analysis period', 'DashboardTranslation'),
-                    'description' => $this->module->l('Select the analysis period and view up to 14 months of data.', 'DashboardTranslation'),
+                    'description' => $this->module->l('Select the analysis period and view up to 24 months of data.', 'DashboardTranslation'),
                 ],
                 'advanced_sync' => [
                     'title' => $this->module->l('Maintain your performance', 'DashboardTranslation'),

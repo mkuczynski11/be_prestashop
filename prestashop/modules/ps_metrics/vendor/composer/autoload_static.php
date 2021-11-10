@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc64b022dbe1bb5579215c3f9ea781ef2
+class ComposerStaticInit50e54e7aa7492dd971492035ff048f9e
 {
     public static $files = array (
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
@@ -512,6 +512,7 @@ class ComposerStaticInitc64b022dbe1bb5579215c3f9ea781ef2
         'PrestaShop\\ModuleLibServiceContainer\\DependencyInjection\\ContainerProvider' => __DIR__ . '/..' . '/prestashop/module-lib-service-container/src/DependencyInjection/ContainerProvider.php',
         'PrestaShop\\ModuleLibServiceContainer\\DependencyInjection\\ServiceContainer' => __DIR__ . '/..' . '/prestashop/module-lib-service-container/src/DependencyInjection/ServiceContainer.php',
         'PrestaShop\\Module\\Ps_metrics\\Adapter\\LinkAdapter' => __DIR__ . '/../..' . '/src/Adapter/LinkAdapter.php',
+        'PrestaShop\\Module\\Ps_metrics\\Adapter\\LoggerAdapter' => __DIR__ . '/../..' . '/src/Adapter/LoggerAdapter.php',
         'PrestaShop\\Module\\Ps_metrics\\Api\\AnalyticsApi' => __DIR__ . '/../..' . '/src/Api/AnalyticsApi.php',
         'PrestaShop\\Module\\Ps_metrics\\Api\\Client\\AnalyticsClient' => __DIR__ . '/../..' . '/src/Api/Client/AnalyticsClient.php',
         'PrestaShop\\Module\\Ps_metrics\\Api\\Client\\ClientFactory' => __DIR__ . '/../..' . '/src/Api/Client/ClientFactory.php',
@@ -531,6 +532,7 @@ class ComposerStaticInitc64b022dbe1bb5579215c3f9ea781ef2
         'PrestaShop\\Module\\Ps_metrics\\GraphQL\\DataLoaders\\ConversionRateDataLoaders' => __DIR__ . '/../..' . '/src/GraphQL/DataLoaders/ConversionRateDataLoaders.php',
         'PrestaShop\\Module\\Ps_metrics\\GraphQL\\DataLoaders\\DataLoaders' => __DIR__ . '/../..' . '/src/GraphQL/DataLoaders/DataLoaders.php',
         'PrestaShop\\Module\\Ps_metrics\\GraphQL\\DataLoaders\\DataLoadersFactory' => __DIR__ . '/../..' . '/src/GraphQL/DataLoaders/DataLoadersFactory.php',
+        'PrestaShop\\Module\\Ps_metrics\\GraphQL\\DataLoaders\\EngagementRateDataLoaders' => __DIR__ . '/../..' . '/src/GraphQL/DataLoaders/EngagementRateDataLoaders.php',
         'PrestaShop\\Module\\Ps_metrics\\GraphQL\\DataLoaders\\OrderAverageDataLoaders' => __DIR__ . '/../..' . '/src/GraphQL/DataLoaders/OrderAverageDataLoaders.php',
         'PrestaShop\\Module\\Ps_metrics\\GraphQL\\DataLoaders\\OrderAverageGroupByDateDataLoaders' => __DIR__ . '/../..' . '/src/GraphQL/DataLoaders/OrderAverageGroupByDateDataLoaders.php',
         'PrestaShop\\Module\\Ps_metrics\\GraphQL\\DataLoaders\\OrderGroupByCustomerDataLoaders' => __DIR__ . '/../..' . '/src/GraphQL/DataLoaders/OrderGroupByCustomerDataLoaders.php',
@@ -1035,9 +1037,9 @@ class ComposerStaticInitc64b022dbe1bb5579215c3f9ea781ef2
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc64b022dbe1bb5579215c3f9ea781ef2::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc64b022dbe1bb5579215c3f9ea781ef2::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitc64b022dbe1bb5579215c3f9ea781ef2::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit50e54e7aa7492dd971492035ff048f9e::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit50e54e7aa7492dd971492035ff048f9e::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit50e54e7aa7492dd971492035ff048f9e::$classMap;
 
         }, null, ClassLoader::class);
     }

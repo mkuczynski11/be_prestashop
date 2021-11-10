@@ -22,7 +22,7 @@ namespace PrestaShop\Module\Ps_metrics\GraphQL\DataLoaders;
 
 use PrestaShop\Module\Ps_metrics\Kpi\VisitsKpi;
 
-class AvgSessionsDataLoaders extends DataLoadersFactory
+class EngagementRateDataLoaders extends DataLoadersFactory
 {
     /**
      * @param array $args
@@ -36,9 +36,9 @@ class AvgSessionsDataLoaders extends DataLoadersFactory
 
         /** @var VisitsKpi $visitsKpi */
         $visitsKpi = $module->getService('ps_metrics.kpi.visits');
+
         $current = $this->getDatas($visitsKpi, $args[0]['InputData']['TimeDimension']['dateRange']);
         $previous = 0;
-
         if (true === $args[0]['InputData']['compareMode']) {
             $previous = $this->getDatas($visitsKpi, $this->switchDateRange($args[0]['InputData']['TimeDimension']['dateRange']));
         }
@@ -61,8 +61,8 @@ class AvgSessionsDataLoaders extends DataLoadersFactory
         $values = $visitsKpi->getTotal();
 
         $value = 0;
-        if (!empty($values['total']) && !empty($values['total']['averageSessionDuration'])) {
-            $value = $values['total']['averageSessionDuration'];
+        if (!empty($values['total']) && !empty($values['total']['engagementRate'])) {
+            $value = $values['total']['engagementRate'];
         }
 
         return $value;

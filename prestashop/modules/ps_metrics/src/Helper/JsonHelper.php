@@ -20,21 +20,23 @@
 
 namespace PrestaShop\Module\Ps_metrics\Helper;
 
+use PrestaShop\Module\Ps_metrics\Adapter\LoggerAdapter;
+
 class JsonHelper
 {
     /**
-     * @var LoggerHelper
+     * @var LoggerAdapter
      */
-    private $loggerHelper;
+    private $loggerAdapter;
 
     /**
      * JsonHelper constructor.
      *
-     * @param LoggerHelper $loggerHelper
+     * @param LoggerAdapter $loggerAdapter
      */
-    public function __construct(LoggerHelper $loggerHelper)
+    public function __construct(LoggerAdapter $loggerAdapter)
     {
-        $this->loggerHelper = $loggerHelper;
+        $this->loggerAdapter = $loggerAdapter;
     }
 
     /**
@@ -55,7 +57,7 @@ class JsonHelper
             return $json;
         }
 
-        $this->loggerHelper->addLog('[PS_METRICS] Unable to encode Json', 3);
+        $this->loggerAdapter->error('[PS_METRICS] Unable to encode Json');
 
         return '';
     }
@@ -76,7 +78,7 @@ class JsonHelper
             return $data;
         }
 
-        $this->loggerHelper->addLog('[PS_METRICS] Unable to decode Json', 3);
+        $this->loggerAdapter->error('[PS_METRICS] Unable to decode Json');
 
         return [];
     }

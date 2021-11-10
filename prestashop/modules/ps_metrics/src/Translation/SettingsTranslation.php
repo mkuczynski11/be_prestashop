@@ -113,9 +113,11 @@ class SettingsTranslation
                     ],
                     'alert' => [
                         'noTagAvailable' => [
-                            'message' => $this->module->l('It looks like no tag has been installed on your store yet. You can configure one easily using our {psAnalyticsLink} for Google Analytics 3 and under. For Google Analytics 4, you will have to use another module from {marketplaceLink}.', 'SettingsTranslation'),
+                            'message' => $this->module->l('It looks like no tag has been installed on your store yet. You can {psAnalyticsAction} our {psAnalyticsLink} for Google Analytics 3 and under. For Google Analytics 4, you will have to use another module from {marketplaceLink}.', 'SettingsTranslation'),
                             'psAnalyticsLink' => $this->module->l('Google Analytics module', 'SettingsTranslation'),
                             'marketplaceLink' => $this->module->l('our marketplace', 'SettingsTranslation'),
+                            'install' => $this->module->l('download', 'SettingsTranslation'),
+                            'configure' => $this->module->l('configure one easily using', 'SettingsTranslation'),
                         ],
                         'notLinked' => [
                             'message' => $this->module->l('A tag has been found on your store but it seems that its property is not linked to your Google Analytics account.', 'SettingsTranslation'),
@@ -131,7 +133,7 @@ class SettingsTranslation
                             'link' => $this->module->l('Find more information in our FAQ.', 'SettingsTranslation'),
                         ],
                         'noTag' => [
-                            'message' => $this->module->l('It looks like you don\'t have a tag (UA-XXXXX-X) on your google analytics account.', 'SettingsTranslation'),
+                            'message' => $this->module->l('It looks like you don\'t have a tag (UA-XXXXX-X OR G-XXXXXXXXX) on your google analytics account.', 'SettingsTranslation'),
                             'link' => $this->module->l('Find more information in our FAQ.', 'SettingsTranslation'),
                         ],
                         'linked' => [

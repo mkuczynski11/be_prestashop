@@ -2,6 +2,26 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Feature {
+  id: String!
+  type: String!
+  value: String!
+  bold: Boolean!
+  soon: Boolean!
+}
+
+type PlanDescription {
+  title: String!
+  tooltip: String
+  bold: Boolean
+  feature: [Feature!]!
+}
+
+type PlansDescription {
+  plans_description: [PlanDescription!]
+  language: String
+}
+
 type Account {
   shop_id: String
   plan: String
@@ -22,6 +42,11 @@ type TipsCard {
   redirect_url: String
 }
 
+type TotalValue {
+  totalCurrent: String
+  totalPrevious: String
+}
+
 type Google {
   previousValue: String
   currentValue: String
@@ -35,12 +60,18 @@ type GoogleDate {
   previousPeriod: [Google!]
 }
 
+type GoogleCategories {
+  categories: [Google!]
+  total: TotalValue
+}
+
 type Revenue {
   currentValue: Float
   previousValue: Float
   date: String
   category: String
   categoryId: Float
+  paymentMethod: String
 }
 
 type RevenueDate {
@@ -51,7 +82,8 @@ type RevenueDate {
 type Order {
   currentValue: Float
   previousValue: Float
-  date: String!
+  date: String
+  category: String
 }
 
 type OrderDate {
@@ -77,18 +109,25 @@ type Cart {
 }
 
 type Query {
-  account(shopId: String!): Account!
+  account(shopId: String!): Account
+  plansDescription(language: String!): PlansDescription!
   sessions(InputData: InputData!): Google!
   uniqueUsers(InputData: InputData!): Google!
   avgSessions(InputData: InputData!): Google!
   bounceRate(InputData: InputData!): Google!
-  sessionsGroupByDate(InputData: InputData!, Granularity: String): GoogleDate!
-  sessionsGroupByCategory(IsoCode: String!, Limit: Float!, InputData: InputData!): [Google!]!
+  sessionsGroupByDate(Granularity: String!, InputData: InputData!): GoogleDate!
+  engagementRate(InputData: InputData!): Google!
+  sessionsGroupByHour(InputData: InputData!): GoogleDate!
+  sessionsGroupByCategory(IsoCode: String!, Limit: Float!, InputData: InputData!): GoogleCategories!
   revenueGross(InputData: InputData!): Revenue!
   revenueGrossGroupByDate(InputData: InputData!): RevenueDate!
   revenueGrossByCategories(IsoCode: String!, InputData: InputData!): [Revenue!]!
   revenueDistribution(InputData: InputData!): [Revenue!]!
+  revenueGrossGroupByPaymentsMethods(InputData: InputData!): [Revenue!]!
   orderSum(InputData: InputData!): Order!
+  orderCountPartNewCustomer(InputData: InputData!): Order!
+  orderCountPartByCustomerCategory(InputData: InputData!): [Order!]!
+  orderCountPartReturningCustomer(InputData: InputData!): Order!
   orderSumGroupByDate(InputData: InputData!): OrderDate!
   orderAverage(InputData: InputData!): Order!
   orderAverageGroupByDate(InputData: InputData!): OrderDate!
@@ -102,6 +141,7 @@ input InputData {
   TimeDimension: TimeDimension!
   ShopId: String!
   compareMode: Boolean = true
+  compareModeType: CompareModeType = PREVIOUS_PERIOD
 }
 
 input TimeDimension {
@@ -111,6 +151,15 @@ input TimeDimension {
 input DateRange {
   startDate: String!
   endDate: String!
+}
+
+"""Type of compare mode"""
+enum CompareModeType {
+  """Compare with previous same period"""
+  PREVIOUS_PERIOD
+
+  """Compare with same period in last year"""
+  LAST_YEAR
 }
 
 type Subscription {

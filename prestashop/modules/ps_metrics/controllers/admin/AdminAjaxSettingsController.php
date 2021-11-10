@@ -257,7 +257,13 @@ class AdminAjaxSettingsController extends ModuleAdminController
             $ip_address = $_SERVER['REMOTE_ADDR'];
         }
 
-        $result = $billingService->subscribeToFreePlan($this->module->name, 'metrics-free', false, $ip_address);
+        /*
+            in some case, $ip_address contain list of ip address...
+            and cause some billings problems
+        */
+        $ip_address = explode(',', $ip_address)[0];
+
+        $result = $billingService->subscribeToFreePlan($this->module->name, 'metrics-free', false, trim($ip_address));
 
         if (empty($result)) {
             $this->ajaxDie($jsonHelper->jsonEncode([

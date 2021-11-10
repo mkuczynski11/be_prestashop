@@ -48,7 +48,7 @@ class GAInstaller
     private $toolsHelper;
 
     /**
-     * @var \Symfony\Component\DependencyInjection\ContainerInterface
+     * @var \Symfony\Component\DependencyInjection\ContainerInterface|null
      */
     protected $container;
 
@@ -113,9 +113,9 @@ class GAInstaller
             $router = $this->get('router');
 
             return substr($this->toolsHelper->getShopDomainSsl(true) . __PS_BASE_URI__, 0, -1) . $router->generate('admin_module_manage_action', [
-                    'action' => 'install',
-                    'module_name' => $this->moduleName,
-                ]);
+                'action' => 'install',
+                'module_name' => $this->moduleName,
+            ]);
         }
 
         return $this->linkAdapter->getAdminLink('AdminModules', true, [], [
@@ -134,7 +134,13 @@ class GAInstaller
     private function get($serviceName)
     {
         if (null === $this->container) {
-            $this->container = \PrestaShop\PrestaShop\Adapter\SymfonyContainer::getInstance();
+            $container = \PrestaShop\PrestaShop\Adapter\SymfonyContainer::getInstance();
+
+            if (is_null($container)) {
+                throw new \PrestaShopException('Symfony container is null or invalid');
+            }
+
+            $this->container = $container;
         }
 
         return $this->container->get($serviceName);
@@ -155,9 +161,9 @@ class GAInstaller
             $router = $this->get('router');
 
             return substr($this->toolsHelper->getShopDomainSsl(true) . __PS_BASE_URI__, 0, -1) . $router->generate('admin_module_manage_action', [
-                    'action' => 'enable',
-                    'module_name' => $this->moduleName,
-                ]);
+                'action' => 'enable',
+                'module_name' => $this->moduleName,
+            ]);
         }
 
         return $this->linkAdapter->getAdminLink('AdminModules', true, [], [

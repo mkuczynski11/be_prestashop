@@ -129,7 +129,7 @@ class Segment implements TrackerInterface
             'context' => [
                 'ip' => $ip,
                 'userAgent' => $userAgent,
-                'locale' => \Context::getContext()->language->iso_code,
+                'locale' => (new PrestashopContext())->getLanguageIsoCode(),
                 'page' => [
                     'referrer' => $referer,
                     'url' => $url,

@@ -220,6 +220,18 @@ class DataLoaders
 
                 return $promiseAdapter->createAll([$output]);
             }, $promiseAdapter),
+            'engagementRate' => new DataLoader(function ($args) use ($promiseAdapter, $module) {
+                $cache_name = $this->getCacheName('engagementRate', $args);
+                $output = $this->dataCache->get($cache_name);
+                if (!$output) {
+                    /** @var EngagementRateDataLoaders $dataLoaders */
+                    $dataLoaders = $module->getService('ps_metrics.graphql.dataloaders.engagementrate');
+                    $output = $dataLoaders->get($args);
+                    $this->dataCache->set($output, $cache_name);
+                }
+
+                return $promiseAdapter->createAll([$output]);
+            }, $promiseAdapter),
         ];
     }
 

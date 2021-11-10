@@ -68,7 +68,6 @@ $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_2cdb3eb1154a17c80393a39c4
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_2ce73c4d438dff8b9f5d55ba411d6e7b'] = 'Seleccionar o período de análise e visualizar até 3 meses de dados.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_2e1d88d5cf8ce608167658071ef4b7cc'] = 'Vendas brutas';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_30346b8afec57f45ce2a2df49ad095a8'] = 'Acompanhe a evolução do seu negócio num relance.';
-$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_314fe27a32557c65b4b6893f8d522a4b'] = 'A fim de exibir sessões e dados de conversão, é necessário configurar a sua conta Google Analytics.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_319e1109dd2856acead9fc01962109aa'] = 'Distribuição do tráfego';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_31acc76f284bd8399a1d7fc0ed4d0467'] = 'Transferência bancária';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_3200d68faae91327d65909eecd183690'] = 'Última sincronização';
@@ -112,7 +111,6 @@ $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_6311ae17c1ee52b36e68aaf4a
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_63cfd1a174bbb041d0ab60411330aba8'] = 'Escolha do período de análise';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_6609dd239e143d00002123326c5e4aad'] = 'Algo correu mal';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_66a00284eaa231e1fd01a6920cd1d99f'] = 'Navegação com separadores';
-$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_694e8d1f2ee056f98ee488bdc4982d73'] = 'Quantidade';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_6c0238413fe749e7c182142b2e91262c'] = 'A taxa de salto é a proporção de visitantes que deixam o seu site directamente após a sua chegada, sem visitar outras páginas.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_6c752b3e857f038c22eac3e400e72487'] = 'Evolução do cesto médio';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_6d7514b19ef511c46438f8f5cc2b9842'] = 'Evolução das sessões';
@@ -169,7 +167,6 @@ $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_97f8bfb09183531c8428bf62a
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_98455de5756f2bc9336e2c0cd9d8f1a6'] = 'A categoria mais vendida durante o período é {produto}. Gerou {valor}{símbolo}.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_9b1024b1350017783b96a77357a7af71'] = 'Por enquanto não existem dados disponíveis';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_9b88c95a15e018c3f8038a7d0160145c'] = 'Paypal';
-$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_9d976d02d6f499b4b999761f7cbd7404'] = 'Desbloqueie o poder dos seus dados com um histórico de dados de 14 meses. Analise o seu desempenho ao longo de mais de um ano. Combinado com nosso novo modo de comparação, permite-lhe obter uma análise anual com um único clique.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_9dbbb666fc626eb3ed5b6a364149ca12'] = 'Actualização';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_9dd52cef0a2c373eb47402cfb3c0f863'] = 'Subscrever o Plano Advanced';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_9e8384b3793ff58e5288fd50dbba12fb'] = 'Análise das receitas';
@@ -183,10 +180,8 @@ $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_a3f8efbd49a6534a71a3e0618
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_a4234d8b7d19ca303ac45df676ec15b3'] = 'Taxa de abandono do carrinho de compras';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_a4776df1e1904ba22dde322333fa1af5'] = 'Os seus blocos de estatísticas anteriores foram desactivados para evitar sobrecarregar o seu painel de instrumentos';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_a58e10475d202defcf18f45694a10e3f'] = 'Comparar com o período anterior';
-$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_a91bbfe1b7e6b2cb13265681d36f0cea'] = 'Seleccionar o período de análise e visualizar até 14 meses de dados.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_a9c4b6c9fbd990849d1f128dfc4ed3e7'] = 'Sessões';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_aa58d512aa7688393dfec119b6cbc1b9'] = 'Este separador só está disponível com o plano Avançado.';
-$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_aad9e8bcc3f985ae8e20e6aa3842c395'] = 'Período seleccionado demasiado longo';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ab2ab704ae9ac6b98e16a48307550d78'] = 'filtro selecionado';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ae581126b16d053885e239408267137f'] = 'Percentagem de utilizadores que realizaram um pedido, fora do número total de utilizadores, dentro do intervalo de datas.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_af2d9c3af1a015ae6ed5eb11d0b88a5c'] = 'Este gráfico detalha o tráfego global para o seu site durante o período.';
@@ -218,7 +213,6 @@ $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_c9d11b65fe46b5ccb0f816ee0
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_caa9dddcf7b51eabeb48f22f14f84feb'] = 'Nenhuma fonte';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_caf2a90cc59fa4fffcc9568ad8fb00a7'] = 'Veja porquê';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_cb8f14fd3a41cfe1236a3c6b90077ca0'] = '7 dias';
-$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_cc3ed201a065b2619503a0265106807c'] = 'Vá mais longe com um histórico de dados de 14 meses';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_cd851a8d5c71512cad25de10fe9b5356'] = 'Destaques';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ce8ae9da5b7cd6c3df2929543a9af92d'] = 'E-mail';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_cf419ab65d67245beffc05b179491f9d'] = 'Tips para aumentar a sua receita';
@@ -268,7 +262,6 @@ $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_e7fe0d75771ae9a77eb3a9876
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ea1bd626d04a840bd5f239c414f0857e'] = 'do que no período anterior';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ea33a2f3de5b0efc107eed174b71101b'] = 'Desbloquear todas as funcionalidades, subscrevendo o plano Avançado.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ea9cf7e47ff33b2be14e6dd07cbcefc6'] = 'Custos de envio';
-$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_eb568e7ca8f45ee9a7eacd9563b0cfd1'] = '14 meses de dados históricos disponíveis';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ebbb98486e0e50bc728d6d805c97d25d'] = 'Este gráfico mostra a evolução do cesto médio durante o período actual e durante o período anterior, se o modo de comparação for activado.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ebfe9ce86e6e9fb953aa7a25b59c1956'] = 'Ontem';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ecfc2dffe568c10a67dbc6d3724cfde2'] = 'Atividade';
@@ -276,14 +269,12 @@ $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ed0ea885a4980c2f308eacc03
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_ef5a748681ee0940986629035b69d89f'] = 'Comparar com';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f1206f9fadc5ce41694f69129aecac26'] = 'Configurar';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f138d22ade29991946a258bff7f0fba7'] = 'Os seus dados do dia';
-$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f167c682f101206f9687d2db59f26f3a'] = 'Por defeito, a comparação com o período anterior é activada, podendo ser desactivada.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f20407c7334fa036d225d605f50dba14'] = 'Este gráfico detalha as vendas brutas ao longo do período.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f2407056c089170d4df9dac66a284f38'] = 'Brevemente';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f315467a284225425c79655d0baccf61'] = 'Um período de análise prolongado';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f431e17ea0081a3c9e51fc240221ee21'] = 'Social';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f4ba63a5b3f518d5c49c1c838ae38b3c'] = 'Este gráfico detalha a evolução das visitas durante o período actual e durante o período anterior, se o modo de comparação for activado.';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f4f70727dc34561dfde1a3c529b6205c'] = 'Parâmetros';
-$_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f57104d0407147cf876c8749b1f2423e'] = '14 meses de profundidade de dados';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f58a6be96db2d79cc83661971784c192'] = 'fonte | fontes';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f915a95e609bbd517a8a1e7bdcceef37'] = 'Tente novamente';
 $_MODULE['<{ps_metrics}prestashop>dashboardtranslation_f98a799903e59d579496312b1963673b'] = 'Próximas funcionalidades';
@@ -315,8 +306,6 @@ $_MODULE['<{ps_metrics}prestashop>settingstranslation_34577fc0116aa3a2db0d3bbe55
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_3f42b1aefa1ca9693cb7f249b32eea11'] = 'para obter os dados certos';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_41e09d79e8ac1f7767c33f99b93a0801'] = 'Foi encontrada uma tag na sua loja, mas parece que não pertence à sua conta Google Analytics.';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_4394c8d8e63c470de62ced3ae85de5ae'] = 'Terminar sessão';
-$_MODULE['<{ps_metrics}prestashop>settingstranslation_45387c0d98ff600cce6473327ab1aa47'] = 'Parece que não tem uma etiqueta (UA-XXXXX-X) na sua conta Google Analytics.';
-$_MODULE['<{ps_metrics}prestashop>settingstranslation_46f59623f012f14c896430be5e334ae9'] = 'Parece que ainda não foi instalada nenhuma etiqueta na sua loja. Pode configurar uma facilmente utilizando o nosso {psAnalyticsLink} para Google Analytics 3 e inferior. Para o Google Analytics 4, terá de utilizar outro módulo de {marketplaceLink}.';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_4c87a25c7288c5aa161f90e5158adf5e'] = 'A propriedade que selecionou não coincide com a tag configurada na sua loja. Selecione outra propriedade ou configure outra tag.';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_5aa7427fcca69cf3544a85978015aaf0'] = 'Encontre mais informações nas nossas FAQ Perguntas Frequentes.';
 $_MODULE['<{ps_metrics}prestashop>settingstranslation_5d0b229db5c328e063ae24e22e8df982'] = 'Selecione esta propriedade';

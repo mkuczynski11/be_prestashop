@@ -155,7 +155,7 @@ class ContextPresenter implements PresenterInterface
                 'user' => [
                     'email' => $email,
                     'emailIsValidated' => $emailIsValidated,
-                    'isSuperAdmin' => \Context::getContext()->employee->isSuperAdmin(),
+                    'isSuperAdmin' => (new PrestaShopContext())->getEmployee()->isSuperAdmin(),
                     'gaIsOnboarded' => (bool) $this->configurationRepository->getGoogleLinkedValue(),
                     'ip' => (isset($_SERVER['REMOTE_ADDR'])) ? $_SERVER['REMOTE_ADDR'] : '',
                     'emailSupport' => $this->module->emailSupport,

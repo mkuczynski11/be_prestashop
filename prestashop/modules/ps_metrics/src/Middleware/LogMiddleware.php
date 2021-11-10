@@ -21,18 +21,18 @@
 
 namespace PrestaShop\Module\Ps_metrics\Middleware;
 
-use PrestaShop\Module\Ps_metrics\Helper\LoggerHelper;
+use PrestaShop\Module\Ps_metrics\Adapter\LoggerAdapter;
 
 class LogMiddleware extends Middleware
 {
     /**
-     * @var LoggerHelper
+     * @var LoggerAdapter
      */
-    private $loggerHelper;
+    private $loggerAdapter;
 
-    public function __construct(LoggerHelper $loggerHelper)
+    public function __construct(LoggerAdapter $loggerHelper)
     {
-        $this->loggerHelper = $loggerHelper;
+        $this->loggerAdapter = $loggerHelper;
     }
 
     /**
@@ -43,7 +43,7 @@ class LogMiddleware extends Middleware
     public function execute($response)
     {
         if (!empty($response['error'])) {
-            $this->loggerHelper->addLog($response['error'], $response['code']);
+            $this->loggerAdapter->error($response['error'], ['error_code' => $response['code']]);
         }
         // Do nothing for the moment
         return parent::execute($response);

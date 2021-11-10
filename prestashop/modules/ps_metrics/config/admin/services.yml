@@ -59,7 +59,7 @@ services:
       - '@ps_metrics.cache.specificdirectory'
       - '@ps_metrics.env.cache'
       - '@ps_metrics.helper.json'
-      - '@ps_metrics.helper.logger'
+      - '@ps_metrics.adapter.logger'
 
   ps_metrics.cache.specificdirectory:
     class: 'PrestaShop\Module\Ps_metrics\Cache\DirectoryCache'
@@ -164,8 +164,8 @@ services:
     class: 'PrestaShop\Module\Ps_metrics\Helper\ShopHelper'
     public: true
 
-  ps_metrics.helper.logger:
-    class: 'PrestaShop\Module\Ps_metrics\Helper\LoggerHelper'
+  ps_metrics.adapter.logger:
+    class: 'PrestaShop\Module\Ps_metrics\Adapter\LoggerAdapter'
     public: true
 
   ps_metrics.helper.segment:
@@ -182,7 +182,7 @@ services:
     class: 'PrestaShop\Module\Ps_metrics\Helper\JsonHelper'
     public: true
     arguments:
-      - '@ps_metrics.helper.logger'
+      - '@ps_metrics.adapter.logger'
 
   ps_metrics.helper.data:
     class: 'PrestaShop\Module\Ps_metrics\Helper\DataHelper'
@@ -335,7 +335,7 @@ services:
     class: 'PrestaShop\Module\Ps_metrics\Middleware\LogMiddleware'
     public: true
     arguments:
-      - '@ps_metrics.helper.logger'
+      - '@ps_metrics.adapter.logger'
 
   ps_metrics.middleware.response.default:
     class: 'PrestaShop\Module\Ps_metrics\Middleware\CheckResponseMiddleware'
@@ -404,6 +404,10 @@ services:
 
   ps_metrics.graphql.dataloaders.bouncerate:
     class: 'PrestaShop\Module\Ps_metrics\GraphQL\DataLoaders\BounceRateDataLoaders'
+    public: true
+
+  ps_metrics.graphql.dataloaders.engagementrate:
+    class: 'PrestaShop\Module\Ps_metrics\GraphQL\DataLoaders\EngagementRateDataLoaders'
     public: true
 
   ps_metrics.graphql.dataloaders.avgsessions:
@@ -504,7 +508,7 @@ services:
     class: 'PrestaShop\PsAccountsInstaller\Installer\Installer'
     public: true
     arguments:
-      - '4.0'
+      - '5.0'
 
   ps_accounts.facade:
     class: 'PrestaShop\PsAccountsInstaller\Installer\Facade\PsAccounts'

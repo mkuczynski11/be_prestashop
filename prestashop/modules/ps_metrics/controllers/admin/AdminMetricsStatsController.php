@@ -84,7 +84,7 @@ class AdminMetricsStatsController extends ModuleAdminController
         if ('true' === $toolsHelper->getValue('fullscreen')) {
             $this->content_only = true;
             $this->display_header = false;
-            $this->display_footer = '';
+            $this->display_footer = false;
             $fullscreen = true;
         }
         $this->loadMetricsAssets($fullscreen);

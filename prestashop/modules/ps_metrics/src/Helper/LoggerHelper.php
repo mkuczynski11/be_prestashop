@@ -21,18 +21,30 @@
 
 namespace PrestaShop\Module\Ps_metrics\Helper;
 
+use InvalidArgumentException;
 use PrestaShopLogger;
 
+/**
+ * @deprecated Use PrestaShop\Module\Ps_metrics\Adapter\LoggerAdapter instead
+ */
 class LoggerHelper
 {
     /**
+     * @deprecated Use PrestaShop\Module\Ps_metrics\Adapter\LoggerAdapter::log() instead
+     *
      * @param string $message
      * @param int $severity
      *
      * @return void
+     *
+     * @throw InvalidArgumentException When severity exceeded allowed value of PrestaShop Logger implementation
      */
     public function addLog($message, $severity)
     {
+        if (!is_int($severity) || $severity < 1 || $severity > 4) {
+            throw new InvalidArgumentException(sprintf('Severity must be a positive integer between 1 and 4, %s given.', var_export($severity, true)));
+        }
+
         PrestaShopLogger::addLog($message, $severity);
     }
 }

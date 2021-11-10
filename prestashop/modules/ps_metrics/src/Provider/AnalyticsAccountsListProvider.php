@@ -132,7 +132,9 @@ class AnalyticsAccountsListProvider
 
         foreach ($accountList as $accounts) {
             foreach ($accounts as $account) {
-                $this->accountsList = array_merge($account, $this->accountsList);
+                foreach ($account as $key => $property) {
+                    $this->accountsList[$key] = $property;
+                }
             }
         }
 

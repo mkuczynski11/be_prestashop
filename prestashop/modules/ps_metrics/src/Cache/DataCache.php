@@ -20,9 +20,9 @@
 
 namespace PrestaShop\Module\Ps_metrics\Cache;
 
+use PrestaShop\Module\Ps_metrics\Adapter\LoggerAdapter;
 use PrestaShop\Module\Ps_metrics\Environment\CacheEnv;
 use PrestaShop\Module\Ps_metrics\Helper\JsonHelper;
-use PrestaShop\Module\Ps_metrics\Helper\LoggerHelper;
 
 class DataCache
 {
@@ -49,9 +49,9 @@ class DataCache
     private $cacheEnv;
 
     /**
-     * @var LoggerHelper
+     * @var LoggerAdapter
      */
-    private $loggerHelper;
+    private $loggerAdapter;
 
     /**
      * __construct
@@ -59,18 +59,18 @@ class DataCache
      * @param DirectoryCache $directoryCache
      * @param CacheEnv $cacheEnv
      * @param JsonHelper $jsonHelper
-     * @param LoggerHelper $loggerHelper
+     * @param LoggerAdapter $loggerAdapter
      */
     public function __construct(
         DirectoryCache $directoryCache,
         CacheEnv $cacheEnv,
         JsonHelper $jsonHelper,
-        LoggerHelper $loggerHelper
+        LoggerAdapter $loggerAdapter
     ) {
         $this->jsonHelper = $jsonHelper;
         $this->directoryCache = $directoryCache;
         $this->cacheEnv = $cacheEnv;
-        $this->loggerHelper = $loggerHelper;
+        $this->loggerAdapter = $loggerAdapter;
     }
 
     /**
@@ -78,7 +78,7 @@ class DataCache
      *
      * @param array|string $param
      *
-     * @return mixed
+     * @return array|false
      */
     public function get($param)
     {
@@ -88,7 +88,7 @@ class DataCache
         }
 
         if (false === $this->directoryCache->isReadable()) {
-            $this->loggerHelper->addLog('[PS_METRICS] Cache folder is not readable', 3);
+            $this->loggerAdapter->error('[PS_METRICS] Cache folder is not readable');
 
             return false;
         }
@@ -122,7 +122,7 @@ class DataCache
         }
 
         if (false === $this->directoryCache->isWritable()) {
-            $this->loggerHelper->addLog('[PS_METRICS] Cache folder is not writable', 3);
+            $this->loggerAdapter->error('[PS_METRICS] Cache folder is not writable');
 
             return $data;
         }
@@ -137,7 +137,7 @@ class DataCache
         $jsonData = $this->jsonHelper->jsonEncode($data);
 
         if (false === @file_put_contents($cacheFileName, $jsonData)) {
-            $this->loggerHelper->addLog('[PS_METRICS] Unable to create data cache', 3);
+            $this->loggerAdapter->error('[PS_METRICS] Unable to create data cache');
         }
 
         return $data;
@@ -207,7 +207,7 @@ class DataCache
     public function deleteAllCache()
     {
         if (false === $this->directoryCache->isWritable()) {
-            $this->loggerHelper->addLog('[PS_METRICS] Not able to delete the cache. Cache folder is not writable', 3);
+            $this->loggerAdapter->error('[PS_METRICS] Not able to delete the cache. Cache folder is not writable');
 
             return false;
         }

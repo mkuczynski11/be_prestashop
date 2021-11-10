@@ -68,7 +68,7 @@ class DashboardModules
     public function enableModules()
     {
         // retrieve module list to enable
-        $moduleListToEnable = $this->configurationRepository->getDashboardModulesToToggle();
+        $moduleListToEnable = $this->configurationRepository->getDashboardModulesToToggleAsArray();
 
         // if the module list is empty, do nothing
         if (empty($moduleListToEnable)) {
@@ -135,7 +135,7 @@ class DashboardModules
      */
     public function modulesIsEnabled()
     {
-        return empty($this->configurationRepository->getDashboardModulesToToggle());
+        return empty($this->configurationRepository->getDashboardModulesToToggleAsArray());
     }
 
     /**

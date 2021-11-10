@@ -28,13 +28,6 @@ abstract class Middleware
     private $next;
 
     /**
-     * Middleware constructor.
-     */
-    public function __construct()
-    {
-    }
-
-    /**
      * @param Middleware $next
      *
      * @return Middleware
