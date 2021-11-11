@@ -1,0 +1,22 @@
+{
+    "name": "effectem/dhlefn",
+    "description": "",
+    "type": "prestashop-module",
+    "require-dev": {
+        "phpunit/phpunit": "^5.7",
+        "prestashop/autoindex": "^2.0"
+    },
+    "config": {
+        "prepend-autoloader": false
+    },
+    "autoload": {
+        "psr-4": {
+            "DHLEFN\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DHLEFN\\Tests\\": "tests/"
+        }
+    }
+}

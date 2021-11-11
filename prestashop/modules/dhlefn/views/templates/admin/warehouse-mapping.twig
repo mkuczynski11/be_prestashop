@@ -1,0 +1,47 @@
+{#DHL European Fulfillment Network#}
+
+{#This file is licenced under the Software License Agreement.#}
+{#With the purchase or the installation of the software in your application#}
+{#you accept the licence agreement.#}
+
+{#You must not modify, adapt or create derivative works of this source code#}
+
+{#@author    resment <info@resment.com>#}
+{#@copyright 2021 resment#}
+{#@license   See joined file licence.txt#}
+{% extends '@PrestaShop/Admin/layout.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/modules/packlink/views/css/bootstrap-prestashop-ui-kit.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+{% endblock %}
+
+{% block content %}
+    <div id="root">React</div>
+    <div
+            id="twig-data"
+            data-customer="{{ customerData|json_encode() }}"
+            data-shop="{{ shopData|json_encode() }}"
+            data-language="{{ language|json_encode() }}"
+            data-products="{{ products|json_encode() }}"
+            data-combinations="{{ combinations|json_encode() }}"
+            data-warehouse-products="{{ warehouseProducts|json_encode() }}"
+            data-warehouses="{{ warehouses|json_encode() }}"
+            data-asns="{{ asns|json_encode() }}"
+            data-categories="{{ categories|json_encode() }}"
+            data-urls="{{ urls|json_encode() }}"
+            data-configuration="{{ configuration|json_encode() }}"
+    ></div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        var twig = Object.assign({}, document.getElementById('twig-data').dataset);
+        Object.entries(twig).forEach(([key, value]) => {
+            twig[key] = JSON.parse(value);
+        });
+        twig.warehousesIndexed = {};
+        twig.warehouses.forEach((wh) => twig.warehousesIndexed[wh.id] = wh);
+    </script>
+    <script src="/modules/dhlefn/views/js/warehouses.js"></script>
+{% endblock %}
