@@ -71,13 +71,19 @@ class ProductScraper(scrapy.Spider):
         ean = None
         mpn = None
         description = None
+        height = None
+        width = None
         features = []
         # For each dt we are trying to parse it to the write column
-        for key in keys:
+        for key in keys:            
             value = info_box.css(f'dl > dd:nth-of-type({index})::text')
             key_raw = key.get()[:-1]
             value_raw = value.get()
-            if key_raw == self.EAN:
+            if key_raw == self.HEIGHT:
+                height = self.parse_height_width(value_raw)
+            elif key_raw == self.WIDTH:
+                width = self.parse_height_width(value_raw)
+            elif key_raw == self.EAN:
                 ean = int(value_raw)
             elif key_raw == '':
                 description = value_raw
@@ -88,7 +94,6 @@ class ProductScraper(scrapy.Spider):
             index += 1
 
         # Product stock amount and delivery time parsing
-        # TODO: on their site there is a note on additional amount in stock with other delivery time
         # resolve it
         in_stock = 0
         additional_in_stock = ''
@@ -166,7 +171,7 @@ class ProductScraper(scrapy.Spider):
 
         with open(self.FILE_NAME, mode='a+') as products_file:
             products_writer = csv.writer(products_file, delimiter=';')
-            products_writer.writerow([active, product_name, categories, url, ean, mpn, description, self.features_to_string(features), in_stock, additional_in_stock, delivery_time, additional_delivery_time,  show_price, available, on_sale, price_brutto, discount, discount_percent, delete_prev_photos, self.features_to_string(img_urls), self.features_to_string(img_alts)])
+            products_writer.writerow([active, product_name, categories, url, ean, mpn, description, height, width, f'{self.features_to_string(features)}~~{additional_in_stock}~~{additional_delivery_time}', in_stock, delivery_time,  show_price, available, on_sale, price_brutto, discount, discount_percent, delete_prev_photos, self.features_to_string(img_urls), self.features_to_string(img_alts)])
 
     def parse_product_categories(self, breadcrumb):
         categories = ['Strona główna']
@@ -182,8 +187,7 @@ class ProductScraper(scrapy.Spider):
     def parse_product_link(self, breadcrumb):
         return breadcrumb.css('p > a:last-child::attr(href)').get()
 
-    def parse_height_width(self, feature):
-        name, value = feature.split(':')
+    def parse_height_width(self, value):
         value = value.lower().replace(',', '.')
 
         value_candidates = value.split(' ')
@@ -196,12 +200,10 @@ class ProductScraper(scrapy.Spider):
             except:
                 continue
 
-        return f'{name}: {best_candidate}'
+        return best_candidate
 
     def features_to_string(self, features):
         features_string = ''
         for feature in features:
-            if "Wysokość" in feature or "Szerokość" in feature or "Od ściany" in feature:
-                feature = self.parse_height_width(feature)
             features_string += feature + '~~'
         return features_string[:-2]

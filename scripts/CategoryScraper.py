@@ -19,7 +19,7 @@ class CategoryScraper(scrapy.Spider):
                 if name in self.NOT_INCLUDED:
                     continue
                 url = item.css('a::attr(href)').get()
-                category_writer.writerow([1, name, 'Strona g??-+???????wna', 0, url])
+                category_writer.writerow([1, name, 'Strona główna', 0, url])
                 children = item.css('div.sub > ul > li')
                 for child in children:
                     child_name = child.css('a::text').get()
