@@ -196,7 +196,7 @@ class ProductScraper(scrapy.Spider):
             except:
                 continue
 
-        return f'{name}:{best_candidate}'
+        return f'{name}: {best_candidate}'
 
     def features_to_string(self, features):
         features_string = ''
