@@ -1,0 +1,21 @@
+services:
+  _defaults:
+    public: true
+
+  prestashop.module.dhlefn.repository.product_warehouse_repository:
+    class: DHLEFN\Repository\DhlefnProductWarehouseLinkRepository
+    factory: [ '@doctrine.orm.default_entity_manager', getRepository]
+    arguments:
+      - DHLEFN\Entity\DhlefnProductWarehouseLink
+
+  prestashop.module.dhlefn.repository.warehouse_repository:
+    class: DHLEFN\Repository\DhlefnWarehouseRepository
+    factory: [ '@doctrine.orm.default_entity_manager', getRepository ]
+    arguments:
+      - DHLEFN\Entity\DhlefnWarehouse
+
+  DHLEFN\Controller\WarehouseController:
+    class: DHLEFN\Controller\WarehouseController
+
+  DHLEFN\Controller\AsnController:
+    class: DHLEFN\Controller\AsnController

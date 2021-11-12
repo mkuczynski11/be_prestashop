@@ -1,0 +1,39 @@
+{
+  "name": "vivawallet/prestashop",
+  "version": "1.0.3",
+  "description": "Official Payment Gateway for Viva Wallet",
+  "homepage": "https://www.vivawallet.com",
+  "authors": [
+    {
+      "name": "Matt Gourd",
+      "email": "mgourd@vivawallet.com"
+    }
+  ],
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "v2.18.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Vivawallet\\Prestashop\\": ""
+    },
+    "exclude-from-classmap": []
+  },
+  "require": {
+    "php": ">=7.2.0",
+    "vivawallet/vivawallet-php": "1.0.5"
+  },
+  "config": {
+    "prepend-autoloader": false
+  },
+  "type": "prestashop-module",
+  "support": {
+    "wiki": "https://developer.vivawallet.com/"
+  },
+  "repositories": {
+    "0": {
+      "type": "composer",
+      "url": "https://repo.packagist.com/vivawallet/"
+    },
+    "packagist.org": false
+  }
+}

@@ -1,0 +1,76 @@
+dhlefn_warehouse_mapping:
+  path: dhlefn/warehouse-mapping
+  methods: [ GET ]
+  defaults:
+    _controller: 'DHLEFN\Controller\WarehouseController::indexAction'
+    _legacy_controller: 'WarehouseController'
+
+dhlefn_save_configuration:
+  path: dhlefn/configuration/save
+  methods: [ POST ]
+  defaults:
+    _controller: 'DHLEFN\Controller\WarehouseController::saveConfigurationAction'
+    _legacy_controller: AdminWarehouses
+
+dhlefn_submit_warehouse_product_mapping:
+  path: dhlefn/warehouse-mapping/submit
+  methods: [ POST ]
+  defaults:
+    _controller: 'DHLEFN\Controller\WarehouseController::updateWarehouseProductMappingAction'
+    _legacy_controller: 'WarehouseController'
+
+dhlefn_sync_warehouse_product_mapping:
+  path: dhlefn/warehouse-mapping/sync
+  methods: [ POST ]
+  defaults:
+    _controller: 'DHLEFN\Controller\WarehouseController::itemMasterSyncAction'
+    _legacy_controller: 'WarehouseController'
+
+dhlefn_submit_warehouse:
+  path: dhlefn/warehouse/update
+  methods: [ POST ]
+  defaults:
+    _controller: 'DHLEFN\Controller\WarehouseController::submitWarehouseAction'
+    _legacy_controller: 'WarehouseController'
+
+dhlefn_asn_create:
+  path: dhlefn/asn/create
+  methods: [ POST ]
+  defaults:
+    _controller: 'DHLEFN\Controller\WarehouseController::asnAction'
+    _legacy_controller: 'WarehouseController'
+
+dhlefn_asn_send:
+  path: dhlefn/asn/send
+  methods: [ POST ]
+  defaults:
+    _controller: 'DHLEFN\Controller\AsnController::sendAsnAction'
+    _legacy_controller: AdminAsn
+
+dhlefn_asn_send_existing:
+  path: dhlefn/asn/send-existing
+  methods: [ POST ]
+  defaults:
+    _controller: 'DHLEFN\Controller\AsnController::sendExistingAsnAction'
+    _legacy_controller: AdminAsn
+
+dhlefn_asn_cancel:
+  path: dhlefn/asn/cancel
+  methods: [ POST ]
+  defaults:
+    _controller: 'DHLEFN\Controller\AsnController::cancelAsnAction'
+    _legacy_controller: AdminAsn
+
+dhlefn_set_form_submitted:
+  path: dhlefn/set-form-submitted
+  methods: [ GET ]
+  defaults:
+    _controller: 'DHLEFN\Controller\WarehouseController::setFormSubmittedAction'
+    _legacy_controller: 'WarehouseController'
+
+dhlefn_check_order_status:
+  path: dhlefn/order/check-status
+  methods: [ POST ]
+  defaults:
+    _controller: 'DHLEFN\Controller\WarehouseController::checkOrderStatusAction'
+    _legacy_controller: AdminWarehouses

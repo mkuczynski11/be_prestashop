@@ -1,0 +1,153 @@
+/**
+ * 2007-2021 PrestaShop
+ *
+ * NOTICE OF LICENSE
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the "Software"),
+ * to use the Software, excluding the rights to copy, modify, merge,
+ * publish, distribute, sublicense, and/or sell copies of the Software,
+ * subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall
+ * remain in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+ * versions in the future. If you wish to customize PrestaShop for your
+ * needs please refer to http://www.prestashop.com for more information.
+ *
+ *  @author    Viva Wallet <support@vivawallet.com>
+ *  @copyright 2021 Viva Wallet
+ *  @license   Commercial license
+ */
+
+#vivawalletofficial_payment_button a {
+	padding: 10px;
+	background-color: #FBFBFB;
+}
+
+#vivawalletofficial_payment_button a:hover {
+	background-color: #f6f6f6;
+}
+
+#vivawalletofficial_payment_button a:after {
+	display: block;
+	content: "\f054";
+	position: absolute;
+	right: 15px;
+	margin-top: -11px;
+	top: 50%;
+	font-family: "FontAwesome";
+	font-size: 25px;
+	height: 22px;
+	width: 14px;
+	color: #777777;
+}
+.error-message {
+	font-size: 13px;
+	color: red;
+	display: none;
+	margin-right: 4px;
+}
+.card-data-container{}
+.card-number-container{
+	display: flex;
+	border: 1px solid lightgrey;
+	background: #f1f1f1;
+}
+#vw-card-number {
+	min-height: 40px;
+	min-width: 200px;
+	/*font-size: 20px;*/
+}
+.card-logos {
+	display: none;
+}
+.instalments-container {
+	display: none;
+}
+.expiry-container {
+	display: flex;
+	min-height: 40px;
+	padding: 0 10px;
+	background: #f1f1f1;
+	border-top: 1px solid lightgrey;
+	border-right: 1px solid lightgrey;
+	border-bottom: 1px solid lightgrey;
+}
+.card-validation-data {
+	min-height: 40px;
+	background-image: unset;
+}
+.card-validation-data:focus {
+	border: none;
+	background-image: unset;
+}
+.vivawallet-card-input.identified {
+	background-repeat: no-repeat;
+	background-position: 97% 50%;
+	padding-right: 50px;
+}
+.vivawallet-form-control {
+	background-color: white;
+}
+.vivawallet-card-input.identified.amex {
+	background-image: url(../img/logos/amex.png);
+}
+.vivawallet-card-input.identified.bancontact {
+	background-image: url(../img/logos/bancontact.png);
+}
+.vivawallet-card-input.identified.dinersclub {
+	background-image: url(../img/logos/dinersclub.png);
+}
+.vivawallet-card-input.identified.jcb {
+	background-image: url(../img/logos/jcb.png);
+}
+.vivawallet-card-input.identified.maestro {
+	background-image: url(../img/logos/maestro.png);
+}
+.vivawallet-card-input.identified.mastercard {
+	background-image: url(../img/logos/mastercard.png);
+}
+.vivawallet-card-input.identified.visa {
+	background-image: url(../img/logos/visa.png);
+}
+.vivawallet-card-input.identified.unionpay {
+	background-image: url(../img/logos/unionpay.png);
+}
+.vivawallet-card-input.identified.forbrugsforeningen {
+	background-image: url(../img/logos/forbrugsforeningen.png);
+}
+.vivawallet-card-input.identified.dankort {
+	background-image: url(../img/logos/dankort.png);
+}
+.vivawallet-card-input.identified.discover {
+	background-image: url(../img/logos/discover.png);
+}
+.error-message-container {
+	display: block;
+}
+
+#threed-secure-frame {
+	min-height: 600px;
+	min-width: 400px;
+}
+
+@media only screen and (max-width:768px) {
+	.inputs-labels {
+		display: none;
+	}
+}
+
+.card-data-container label{
+	text-align: left;
+}
