@@ -71,13 +71,19 @@ class ProductScraper(scrapy.Spider):
         ean = None
         mpn = None
         description = None
+        height = None
+        width = None
         features = []
         # For each dt we are trying to parse it to the write column
-        for key in keys:
+        for key in keys:            
             value = info_box.css(f'dl > dd:nth-of-type({index})::text')
             key_raw = key.get()[:-1]
             value_raw = value.get()
-            if key_raw == self.EAN:
+            if key_raw == self.HEIGHT:
+                height = self.parse_height_width(value_raw)
+            elif key_raw == self.WIDTH:
+                width = self.parse_height_width(value_raw)
+            elif key_raw == self.EAN:
                 ean = int(value_raw)
             elif key_raw == '':
                 description = value_raw
@@ -88,16 +94,25 @@ class ProductScraper(scrapy.Spider):
             index += 1
 
         # Product stock amount and delivery time parsing
-        # TODO: on their site there is a note on additional amount in stock with other delivery time
         # resolve it
         in_stock = 0
+        additional_in_stock = ''
         delivery_time = None
+        additional_delivery_time = ''
         stock_em = info_box.css('p.stock > em::text').get()
         if stock_em:
             in_stock = info_box.css('p.stock::text').get()
             delivery_time = in_stock
             in_stock = in_stock.replace('szt.', '')
             in_stock = int(in_stock)
+            additional_info = info_box.css('p.stock > small::text').get()
+            # Parsing additional info 
+            if additional_info:
+                amount, delivery = additional_info.split('/')
+                amount = amount.replace('+', '').replace('szt.', '').strip()
+                delivery = delivery.strip()
+                additional_in_stock = f'Dodatkowo:{amount}'
+                additional_delivery_time = f'DostawaDodatkowa:{delivery}'
             if info_box.css('p.stock > span::text').get():
                 delivery_time = info_box.css('p.stock > span::text').get()
                 delivery_time = delivery_time.split(' ')[3:]
@@ -132,11 +147,13 @@ class ProductScraper(scrapy.Spider):
         discount = info_box.css('div#rabat > strong::text').get()
         if discount is not None:
             discount = float(discount)
+            price_brutto += discount
         discount_percent = info_box.css('div#rabat > span::text').get()
         if discount_percent is not None:
             discount_percent = int(discount_percent.split(' ')[-1][:-1])
 
         show_price = 1
+        delete_prev_photos = 1
         on_sale = 1 if discount is not None else 0
 
         img_urls = []
@@ -154,10 +171,10 @@ class ProductScraper(scrapy.Spider):
 
         with open(self.FILE_NAME, mode='a+') as products_file:
             products_writer = csv.writer(products_file, delimiter=';')
-            products_writer.writerow([active, product_name, categories, url, ean, mpn, description, self.features_to_string(features), in_stock, delivery_time, show_price, available, on_sale, price_brutto, discount, discount_percent, self.features_to_string(img_urls), self.features_to_string(img_alts)])
+            products_writer.writerow([active, product_name, categories, url, ean, mpn, description, height, width, f'{self.features_to_string(features)}~~{additional_in_stock}~~{additional_delivery_time}', in_stock, delivery_time,  show_price, available, on_sale, price_brutto, discount, discount_percent, delete_prev_photos, self.features_to_string(img_urls), self.features_to_string(img_alts)])
 
     def parse_product_categories(self, breadcrumb):
-        categories = []
+        categories = ['Strona główna']
         for a in breadcrumb.css('p  > a::text'):
             categories.append(a.get())
         # Last breadcrumb is product name
@@ -169,6 +186,21 @@ class ProductScraper(scrapy.Spider):
 
     def parse_product_link(self, breadcrumb):
         return breadcrumb.css('p > a:last-child::attr(href)').get()
+
+    def parse_height_width(self, value):
+        value = value.lower().replace(',', '.')
+
+        value_candidates = value.split(' ')
+        best_candidate = 0
+        for candidate in value_candidates:
+            tmp = 0
+            try:
+                tmp = float(candidate)
+                best_candidate = tmp if tmp > best_candidate else best_candidate
+            except:
+                continue
+
+        return best_candidate
 
     def features_to_string(self, features):
         features_string = ''

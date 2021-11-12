@@ -36,3 +36,4 @@ upload/
 
 # Python
 scripts/__pycache__/*
+scripts/SeleniumImport/.venv/*
