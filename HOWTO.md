@@ -3,6 +3,12 @@ Make sure dump.sql is in db-dumps directory
 Make sure to chmod +777 all files in repository. For instance
 ```bash
 sudo chmod +777 be_prestashop/ -R
+```
+Make sure to generate docker image with ssl.  
+Run this command from be_prestashop directory
+```bash
+docker build . -t presta_ssl
+```
 docker-compose up
 ```
 
@@ -17,7 +23,7 @@ docker exec presta_lampy_db_1 /usr/bin/mysqldump -u root --password=root presta_
 ```
 
 # Access
-email: mkuczynski11.kontakt@gmail.com
+email: mkuczynski11.kontakt@gmail.com  
 name: Admin  
 surname: Admin  
 password: adminadmin
