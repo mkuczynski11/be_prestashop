@@ -89,8 +89,7 @@ class ProductScraper(scrapy.Spider):
                 description = value_raw
             elif key_raw == self.MPN:
                 mpn = value_raw
-            else:
-                features.append(f'{key_raw}:{value_raw}')
+            features.append(f'{key_raw}:{value_raw}')
             index += 1
 
         # Product stock amount and delivery time parsing
