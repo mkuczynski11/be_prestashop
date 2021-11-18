@@ -1,6 +1,10 @@
 import csv
 import os
 import scrapy
+import random
+import threading
+
+threadLock = threading.Lock()
 
 # to generate data type in terminal
 # scrapy runspider scripts/ProductScraper.py
@@ -17,12 +21,21 @@ class ProductScraper(scrapy.Spider):
     WIDTH = 'Szerokość'
     MPN = 'Nr kat.'
 
+    ID = 1
+
     def parse(self, response):
 
         # Removing file if it exists, so that new values can be appended
         # without causing any issues
         try:
             os.remove(self.FILE_NAME)
+        except:
+            pass
+
+        # Removing file if it exists, so that new values can be appended
+        # without causing any issues
+        try:
+            os.remove("combinations.csv")
         except:
             pass
         
@@ -154,6 +167,7 @@ class ProductScraper(scrapy.Spider):
         show_price = 1
         delete_prev_photos = 1
         on_sale = 1 if discount is not None else 0
+        configurable = 1
 
         img_urls = []
         img_alts = []
@@ -167,10 +181,26 @@ class ProductScraper(scrapy.Spider):
             img_urls.append(link)
             img_alts.append(product_name)
 
-
-        with open(self.FILE_NAME, mode='a+') as products_file:
-            products_writer = csv.writer(products_file, delimiter=';')
-            products_writer.writerow([active, product_name, categories, url, ean, mpn, description, height, width, f'{self.features_to_string(features)}~~{additional_in_stock}~~{additional_delivery_time}', in_stock, delivery_time,  show_price, available, on_sale, price_brutto, discount, discount_percent, delete_prev_photos, self.features_to_string(img_urls), self.features_to_string(img_alts)])
+        with threadLock:
+            id = self.ID
+            self.ID += 1
+            with open(self.FILE_NAME, mode='a+') as products_file:
+                products_writer = csv.writer(products_file, delimiter=';')
+                products_writer.writerow([id, active, product_name, categories, url, ean, mpn, description, height, width, f'{self.features_to_string(features)}~~{additional_in_stock}~~{additional_delivery_time}', in_stock, delivery_time,  show_price, available, on_sale, price_brutto, discount, discount_percent, delete_prev_photos, self.features_to_string(img_urls), self.features_to_string(img_alts), configurable])
+            with open("combinations.csv", "a+") as combinations_file:
+                combinations_writer = csv.writer(combinations_file, delimiter=';')
+                amount = in_stock if in_stock is not None else 0
+                amount_1 = random.randint(0, amount)
+                amount -= amount_1
+                combinations_writer.writerow([id, "Kolor:color:0~~Rodzaj wtyczki:select:1", "Biały:0~~Europejska:1", 0, 0, 0, amount_1, 1, 0, 0, 1])
+                amount_2 = random.randint(0, amount)
+                amount -= amount_2
+                combinations_writer.writerow([id, "Kolor:color:0~~Rodzaj wtyczki:select:1", "Czarny:0~~Europejska:1", 0, 0, 0, amount_2, 1, 0, 0, 0])
+                amount_3 = random.randint(0, amount)
+                amount -= amount_3
+                combinations_writer.writerow([id, "Kolor:color:0~~Rodzaj wtyczki:select:1", "Biały:0~~Amerykańska:1", 0, 10, 0, amount_3, 1, 0, 0, 0])
+                amount_4 = amount
+                combinations_writer.writerow([id, "Kolor:color:0~~Rodzaj wtyczki:select:1", "Czarny:0~~Amerykańska:1", 0, 10, 0, amount_4, 1, 0, 0, 0])
 
     def parse_product_categories(self, breadcrumb):
         categories = ['Strona główna']
