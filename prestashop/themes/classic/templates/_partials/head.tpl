@@ -72,13 +72,13 @@
 {block name='hook_extra'}
 {literal}
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JNBM7ML8P6"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1LYJLE0B8"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-JNBM7ML8P6');
+  gtag('config', 'G-N1LYJLE0B8');
 </script>
 {/literal}
 {/block}
