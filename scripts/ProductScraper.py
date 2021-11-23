@@ -203,7 +203,7 @@ class ProductScraper(scrapy.Spider):
                 combinations_writer.writerow([id, "Kolor:color:0~~Rodzaj wtyczki:select:1", "Czarny:0~~Amerykańska:1", 0, 10, 0, amount_4, 1, 0, 0, 0])
 
     def parse_product_categories(self, breadcrumb):
-        categories = ['Strona główna']
+        categories = []
         for a in breadcrumb.css('p  > a::text'):
             categories.append(a.get())
         # Last breadcrumb is product name
