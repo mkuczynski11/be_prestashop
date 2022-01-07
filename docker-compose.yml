@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  be_180199_prestashop:
+    image: mkuczynski11/be_180199
+    ports:
+      - XXXX:80
+      - YYYY:443
+    restart: always
+    environment:
+      PS_INSTALL_AUTO: 0
+      PS_ERASE_DB: 0
+      DB_SERVER: actina15.maas
+      DB_USER: be_180199
+      DB_PASSWD: haslo
+      DB_NAME: be_180199_db
+      PS_DEV_MODE: 0
+      ALLOW_OVERRIDE: 1
+    deploy:
+      replicas: 1

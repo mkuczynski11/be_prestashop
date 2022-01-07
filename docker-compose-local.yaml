@@ -24,7 +24,7 @@ services:
   prestashop:
     depends_on:
       - db
-    image: presta_ssl
+    image: mkuczynski11/be_180199
     ports:
       - 80:80
       - 443:443
@@ -36,8 +36,9 @@ services:
       DB_USER: root
       DB_PASSWD: root
       DB_NAME: presta_lamps
-      PS_DEV_MODE: 1
+      PS_DEV_MODE: 0
       PS_DOMAIN: localhost:80
+      ALLOW_OVERRIDE: 1
     volumes:
-      - ./prestashop:/var/www/html
+      - /var/www/html
       - ./ssl:/etc/apache2/sites-available
