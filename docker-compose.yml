@@ -12,7 +12,7 @@ services:
       PS_ERASE_DB: 0
       DB_SERVER: actina15.maas
       DB_USER: be_180199
-      DB_PASSWD: haslo
+      DB_PASSWD: 2115
       DB_NAME: be_180199_db
       PS_DEV_MODE: 0
       ALLOW_OVERRIDE: 1
