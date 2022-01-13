@@ -4,8 +4,8 @@ services:
   be_180199_prestashop:
     image: mkuczynski11/be_180199
     ports:
-      - XXXX:80
-      - YYYY:443
+      - 18019:80
+      - 18020:443
     restart: always
     environment:
       PS_INSTALL_AUTO: 0
