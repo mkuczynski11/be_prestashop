@@ -4,7 +4,7 @@ RUN rm -rf *
 
 COPY prestashop/ ./
 
-RUN chown -R www-data:root ./
+RUN chmod -R 777 /var/www/html
 
 RUN a2enmod ssl
 
