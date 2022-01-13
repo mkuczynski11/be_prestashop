@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # copy dump
-docker cp ./db-dumps/*.sql wjk9pz7gh2s9:/tmp/be_180199.sql
+docker cp ./*.sql wjk9pz7gh2s9:/tmp/be_180199.sql
 
 # copy database loading script
 docker cp ./db-dump.sh wjk9pz7gh2s9:/tmp/db-dump_180199.sh
