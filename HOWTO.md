@@ -19,3 +19,5 @@ email: mkuczynski11.kontakt@gmail.com
 name: Admin  
 surname: Admin  
 password: adminadmin
+
+# Starting point commit
