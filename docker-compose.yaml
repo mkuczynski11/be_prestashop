@@ -36,8 +36,7 @@ services:
       DB_USER: root
       DB_PASSWD: root
       DB_NAME: presta_lamps
-      PS_DEV_MODE: 1
-      PS_DOMAIN: localhost:80
+      PS_DEV_MODE: 0
     volumes:
-      - ./prestashop:/var/www/html
-      - ./ssl:/etc/apache2/sites-available
+      - ./parameters.php:/var/www/html/app/config/parameters.php
+      - ./appParameters.php:/var/www/html/var/cache/prod/appParameters.php
