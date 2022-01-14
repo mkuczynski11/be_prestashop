@@ -1,0 +1,2 @@
+*ERROR* 	v1.7.7.8	2022/01/14 - 09:52:06: Link to database cannot be established: SQLSTATE[HY000] [1045] Access denied for user &#039;root&#039;@&#039;172.18.0.4&#039; (using password: NO) at line 136 in file classes/db/DbPDO.php
+*ERROR* 	v1.7.7.8	2022/01/14 - 09:52:06: Link to database cannot be established: SQLSTATE[HY000] [1045] Access denied for user &#039;root&#039;@&#039;172.18.0.4&#039; (using password: NO) at line 136 in file classes/db/DbPDO.php
