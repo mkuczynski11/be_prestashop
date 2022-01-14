@@ -24,7 +24,7 @@ services:
   prestashop:
     depends_on:
       - db
-    image: presta_ssl
+    image: mkuczynski11/be_180199
     ports:
       - 80:80
       - 443:443
